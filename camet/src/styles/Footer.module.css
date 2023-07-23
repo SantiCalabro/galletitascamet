@@ -1,0 +1,13 @@
+.container {
+  background-color: #633511;
+  height: 100px;
+  width: 100vw;
+  padding-top: 20px;
+  display: flex;
+  position: absolute;
+  bottom: 0;
+}
+.container img {
+  margin-right: 50px;
+  height: 50px;
+}
