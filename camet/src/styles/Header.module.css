@@ -16,9 +16,10 @@
   align-items: center;
 }
 .navMenu ul {
-  padding-left: 0;
+  padding: 0;
   display: flex;
   margin-left: 50px;
+  margin-bottom: 0;
   width: 40vw;
 }
 .navMenu ul li {
@@ -49,3 +50,9 @@
   fill: #ff7d00;
   transition: 0.15s ease-in-out;
 }
+/* .btnContainer {
+  display: flex;
+  width: 100vw;
+  height: 30px;
+  align-items: center;
+} */

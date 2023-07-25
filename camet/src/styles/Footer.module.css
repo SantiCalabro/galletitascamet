@@ -4,8 +4,6 @@
   width: 100vw;
   padding-top: 20px;
   display: flex;
-  position: absolute;
-  bottom: 0;
 }
 .container img {
   margin-right: 50px;

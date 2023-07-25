@@ -20,10 +20,22 @@ export default function Header() {
           <Link to="/">
             <li>Inicio</li>
           </Link>
-          <li to="/nosotros">Nosotros</li>
-          <li to="/productos">Productos</li>
-          <li to="/recetas">Recetas</li>
-          <li to="/contacto">Contactanos</li>
+          <Link to="/nosotros">
+            {" "}
+            <li to="/nosotros">Nosotros</li>{" "}
+          </Link>
+          <Link to="/productos">
+            {" "}
+            <li to="/productos">Productos</li>{" "}
+          </Link>
+          <Link to="/recetas">
+            {" "}
+            <li to="/recetas">Recetas</li>{" "}
+          </Link>
+          <Link to="/contacto">
+            {" "}
+            <li>Contactanos</li>{" "}
+          </Link>
         </ul>
         <div className={H.socialMedia}>
           <svg
