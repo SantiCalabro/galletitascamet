@@ -1,0 +1,25 @@
+.responsiveHeader {
+  display: none;
+}
+.titleContainer {
+  width: 100vw;
+  display: flex;
+  padding-top: 30px;
+}
+.titleContainer h3 {
+  color: #633511;
+  font-weight: 600;
+  font-size: 20px;
+  padding-bottom: 5px;
+  width: 50%;
+  text-align: center;
+  border-bottom: solid 1px #633511;
+}
+@media screen and (max-width: 767px) {
+  .desktopHeader {
+    display: none;
+  }
+  .responsiveHeader {
+    display: block;
+  }
+}
