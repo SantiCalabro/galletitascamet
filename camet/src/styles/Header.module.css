@@ -9,20 +9,23 @@
 .container img {
   height: 60px;
 }
-.navMenu {
+.navMenu,
+.navMenuActive {
   background-color: #633511;
   display: flex;
   height: 30px;
   align-items: center;
 }
-.navMenu ul {
+.navMenu ul,
+.navMenuActive ul {
   padding: 0;
   display: flex;
   margin-left: 50px;
   margin-bottom: 0;
   width: 40vw;
 }
-.navMenu ul li {
+.navMenu ul li,
+.navMenuActive ul li {
   text-decoration: none;
   color: #fff;
   list-style: none;
@@ -30,7 +33,8 @@
   border: none;
   cursor: pointer;
 }
-.navMenu ul li:focus {
+.navMenu ul li:focus,
+.navMenuActive ul li:focus {
   outline: none;
 }
 .navMenu ul li:hover {
@@ -39,8 +43,11 @@
 }
 .socialMedia {
   display: flex;
-  width: 5vw;
-  margin-right: 50px;
+  width: 70px;
+
+  margin-right: 0px;
+  position: relative;
+  left: 50px;
 }
 .socialMedia svg {
   cursor: pointer;
@@ -50,9 +57,147 @@
   fill: #ff7d00;
   transition: 0.15s ease-in-out;
 }
-/* .btnContainer {
-  display: flex;
-  width: 100vw;
-  height: 30px;
-  align-items: center;
-} */
+.socialMediaContainer p {
+  display: none;
+}
+.responsiveClosedMenu,
+.responsiveMenu {
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  .responsiveClosedMenu {
+    left: 20px;
+    top: 40px;
+    scale: 0.6;
+    cursor: pointer;
+    position: absolute;
+    fill: #fff;
+    display: flex;
+    justify-content: center;
+    transition: 0.15s ease-in-out;
+    display: block;
+  }
+
+  .responsiveMenu {
+    left: 20px;
+    top: 40px;
+    scale: 0.6;
+    cursor: pointer;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    transition: 0.15s ease-in-out;
+    display: block;
+  }
+  .activeTop {
+    bottom: 14px;
+    height: 3px;
+    width: 35px;
+    background-color: #633511;
+    border-radius: 50px;
+    position: absolute;
+    transition: 0.3s ease-in-out;
+    transform: rotate(-45deg);
+    transform-origin: right;
+    top: -13px;
+  }
+  .top {
+    bottom: 4px;
+    height: 3px;
+    width: 30px;
+    background-color: #633511;
+    border-radius: 50px;
+    position: absolute;
+    transition: 0.15s ease-in-out;
+  }
+
+  .middle {
+    height: 3px;
+    width: 30px;
+    background-color: #633511;
+    border-radius: 50px;
+    position: absolute;
+    transition: 0.15s ease;
+    top: 3px;
+  }
+  .bottom {
+    top: 14px;
+    height: 3px;
+    width: 30px;
+    background-color: #633511;
+    border-radius: 50px;
+    position: absolute;
+    transition: 0.3s ease;
+  }
+  .activeBottom {
+    top: -25px;
+    height: 3px;
+    width: 35px;
+    background-color: #633511;
+    border-radius: 10px;
+    position: absolute;
+    transition: 0.3s ease-in-out;
+    transform: rotate(45deg);
+    transform-origin: right;
+    top: 13px;
+  }
+  .navMenu {
+    height: fit-content;
+    flex-direction: column;
+    justify-content: center;
+    display: none;
+  }
+  .navMenuActive {
+    height: fit-content;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    z-index: 100;
+  }
+  .navMenu ul,
+  .navMenuActive ul {
+    flex-direction: column;
+    margin: auto;
+    width: 100vw;
+  }
+  .navMenu ul li,
+  .navMenuActive ul li {
+    padding: 10px;
+    border-bottom: solid 1px #ff7d00;
+    width: 100vw;
+    text-align: center;
+  }
+  .socialMedia {
+    /* position: unset;
+    left: auto; */
+    width: 100%;
+    padding-left: 30%;
+    padding-right: 30%;
+    height: 50px;
+    align-items: center;
+    margin-top: -10px;
+    margin-bottom: 10px;
+  }
+  .socialMedia svg {
+    scale: 1.2;
+  }
+  .socialMediaContainer p {
+    display: block;
+    color: #fff;
+    text-align: center;
+    margin-top: 10px;
+  }
+  .socialMediaContainer {
+    background-color: #784312;
+    width: 100vw;
+  }
+  .hiddenBackground {
+    display: none;
+  }
+  .background {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background-color: rgb(0, 0, 0, 0.7);
+  }
+}

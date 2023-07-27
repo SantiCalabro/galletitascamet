@@ -1,0 +1,11 @@
+.responsiveCarousel {
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  .desktopCarousel {
+    display: none;
+  }
+  .responsiveCarousel {
+    display: block;
+  }
+}
