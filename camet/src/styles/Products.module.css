@@ -15,6 +15,31 @@
   text-align: center;
   border-bottom: solid 1px #633511;
 }
+.itemContainer {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 90vw;
+}
+.item {
+  margin-left: 30px;
+  margin-right: 30px;
+  display: flex;
+  flex-direction: column;
+}
+.productImage {
+  display: flex;
+  height: 200px;
+  align-items: center;
+}
+.img {
+  margin-top: auto;
+}
+.item span {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #633511;
+}
 @media screen and (max-width: 767px) {
   .desktopHeader {
     display: none;
