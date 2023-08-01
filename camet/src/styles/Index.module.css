@@ -1,11 +1,15 @@
 .responsiveCarousel {
   display: none;
 }
+.desktopCarousel {
+  margin-top: 110px;
+}
 @media screen and (max-width: 767px) {
   .desktopCarousel {
     display: none;
   }
   .responsiveCarousel {
     display: block;
+    margin-top: 80px;
   }
 }

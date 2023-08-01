@@ -1,46 +1,59 @@
 import React from "react";
 import Layout from "../../layouts/index.jsx";
-import { graphql, Link, useStaticQuery } from "gatsby";
+import { graphql, Link } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import * as P from "../../styles/Products.module.css";
 import Img from "gatsby-image";
+import WhatsappButton from "../../components/WhatsappButton.jsx";
 
 export default function Productos({ data }) {
   const cards = data.allMarkdownRemark.nodes;
 
   return (
     <Layout>
-      <div className={P.desktopHeader}>
-        <Img
-          fluid={data.desktopBanner.childImageSharp.fluid}
-          alt="Fotografía de galletitas con salamín"
-        />
-      </div>
-      <div className={P.responsiveHeader}>
-        <Img
-          fluid={data.mobileBanner.childImageSharp.fluid}
-          alt="Fotografía de galletitas con salamín"
-        />
-      </div>
-      <div className={P.titleContainer}>
-        <h3>• Nuestras variedades •</h3>
-      </div>
-      <div className={P.itemContainer}>
-        {cards.map(card => {
-          const image = getImage(card.frontmatter.image);
-          return (
-            <Link to={`/${card.id}`}>
-              <div key={card.id} className={P.item}>
-                <div className={P.productImage}>
-                  <div className={P.img}>
-                    <GatsbyImage image={image} alt={card.frontmatter.title} />
+      <div className={P.container}>
+        <div className={P.desktopHeader}>
+          <Img
+            fluid={data.desktopBanner.childImageSharp.fluid}
+            alt="Fotografía de galletitas con salamín"
+          />
+        </div>
+        <div className={P.responsiveHeader}>
+          <Img
+            fluid={data.mobileBanner.childImageSharp.fluid}
+            alt="Fotografía de galletitas con salamín"
+          />
+        </div>
+        <div className={P.titleContainer}>
+          <h3>• Nuestras variedades •</h3>
+        </div>
+        <div className={P.itemContainer}>
+          {cards.map(card => {
+            const image = getImage(card.frontmatter.image);
+            return (
+              <Link
+                to={`/productos/${card.frontmatter.productId}`}
+                key={card.id}
+              >
+                <div key={card.id} className={P.item}>
+                  <div className={P.productImage}>
+                    <div className={P.img}>
+                      <GatsbyImage image={image} alt={card.frontmatter.title} />
+                    </div>
                   </div>
+                  <span>{card.frontmatter.title}</span>
                 </div>
-                <span>{card.frontmatter.title}</span>
-              </div>
-            </Link>
-          );
-        })}
+              </Link>
+            );
+          })}
+        </div>
+        <div className={P.whatsapp}>
+          <WhatsappButton
+            phoneNumber="+542213085752"
+            message={"Hola, quiero más información"}
+            text={"Hacenos tu pregunta"}
+          />
+        </div>
       </div>
     </Layout>
   );
@@ -67,6 +80,7 @@ export const query = graphql`
         id
         frontmatter {
           title
+          productId
           image {
             childImageSharp {
               gatsbyImageData(width: 150)

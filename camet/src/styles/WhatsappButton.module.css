@@ -1,0 +1,48 @@
+.container {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: #633511;
+}
+.container svg {
+  fill: #fff;
+  width: 30px;
+  height: 30px;
+}
+.container:hover {
+  background-color: #fff;
+  transition: 0.1s ease-in-out;
+}
+.container:hover .icon {
+  fill: #633511;
+}
+.container span {
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  .container span {
+    display: inline-block;
+    color: #fff;
+    font-size: 14px;
+  }
+  .container {
+    border-radius: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+  }
+  .container svg {
+    fill: #fff;
+    height: 20px;
+    width: 20px;
+    margin-right: 10px;
+  }
+}
