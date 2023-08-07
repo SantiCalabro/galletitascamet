@@ -1,5 +1,6 @@
 import React from "react";
 import * as P from "../styles/ProductsPreview.module.css";
+import { Link } from "gatsby";
 
 export default function ProductsPreview() {
   const items = [
@@ -38,7 +39,9 @@ export default function ProductsPreview() {
         ))}
       </div>
       <div className={P.btnContainer}>
-        <button className={P.btn}>Ver todas</button>
+        <Link to="/productos">
+          <button className={P.btn}>Ver todas</button>
+        </Link>
       </div>
     </div>
   );

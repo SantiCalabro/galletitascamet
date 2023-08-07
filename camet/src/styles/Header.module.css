@@ -9,6 +9,7 @@
   top: 0;
   background-color: #fffbe4;
   padding-top: 10px;
+  z-index: 901;
 }
 .container img {
   height: 60px;

@@ -13,6 +13,7 @@ module.exports = {
     description:
       "Deliciosas y crujientes galletas para todos los gustos. Explora nuestra selección de sabores y texturas. Encuentra tu favorita en Galletitas Camet.",
   },
+
   plugins: [
     "gatsby-plugin-react-helmet",
     {
@@ -27,6 +28,23 @@ module.exports = {
       options: {
         name: "cards",
         path: `${__dirname}/src/content`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        defaults: {
+          formats: [`auto`, `webp`, `png`, `jpg`],
+          placeholder: `none`,
+          breakpoints: [750, 1080, 1366, 1920],
+          backgroundColor: `white`,
+          tracedSVGOptions: {},
+          blurredOptions: {},
+          jpgOptions: {},
+          pngOptions: {},
+          webpOptions: {},
+          avifOptions: {},
+        },
       },
     },
 

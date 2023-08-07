@@ -1,6 +1,6 @@
 import React from "react";
 import * as F from "../styles/Footer.module.css";
-import { graphql, useStaticQuery } from "gatsby";
+import { graphql, useStaticQuery, Link } from "gatsby";
 
 export default function Footer() {
   const data = useStaticQuery(graphql`
@@ -14,7 +14,9 @@ export default function Footer() {
 
   return (
     <div className={F.container}>
-      <img src={logoImageUrl} alt="Logo Camet" />
+      <Link to="/">
+        <img src={logoImageUrl} alt="Logo Camet" />
+      </Link>
     </div>
   );
 }

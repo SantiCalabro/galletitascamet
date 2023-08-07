@@ -28,7 +28,9 @@ export default function Header() {
           <span className={nav ? H.activeMiddle : H.middle}></span>
           <span className={nav ? H.activeBottom : H.bottom}></span>
         </div>
-        <img src={logoImageUrl} alt="Logo Camet" />
+        <Link to="/">
+          <img src={logoImageUrl} alt="Logo Camet" />
+        </Link>
       </div>
 
       <div className={nav ? H.navMenuActive : H.navMenu}>

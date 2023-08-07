@@ -1,0 +1,109 @@
+.container {
+  margin-top: 90px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+}
+.imgContainer {
+  display: flex;
+  margin-left: 50px;
+}
+.img {
+  width: 30vw;
+  z-index: 200;
+}
+.imgContainer h1 {
+  font-size: 25px;
+  font-weight: 600;
+  color: #633511;
+}
+.imgContainer p {
+  color: #633511;
+  font-size: 16px;
+  font-weight: 400;
+}
+.description {
+  border-bottom: solid 1px #633511;
+  width: fit-content;
+  margin: 0;
+  margin-bottom: 5px;
+}
+.textContainer {
+  height: fit-content;
+  float: right;
+}
+
+.textBackground {
+  background-color: #fff;
+  border-radius: 30px;
+  height: fit-content;
+  position: relative;
+  top: 100px;
+  right: 80px;
+  width: 32vw;
+  padding-right: 30px;
+  padding-top: 25px;
+  padding-bottom: 10px;
+  padding-left: 120px;
+  display: flex;
+}
+.relatedProductsContainer {
+  margin-right: 30px;
+}
+
+.relatedProduct {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  display: flex;
+  cursor: pointer;
+  margin-bottom: 20px;
+  box-shadow: 10px 10px 10px -7px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 10px 10px 10px -7px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 10px 10px 10px -7px rgba(0, 0, 0, 0.15);
+}
+.relatedProduct:hover {
+  transition: 0.2s ease-in-out;
+  box-shadow: 10px 10px 10px -7px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 10px 10px 10px -7px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 10px 10px 10px -7px rgba(0, 0, 0, 0.3);
+}
+.relatedProduct:hover .relatedTextContainer h3 {
+  color: #c27f40;
+  transition: 0.2s ease-in-out;
+}
+.relatedProduct:hover .relatedTextContainer p {
+  color: #c27f40;
+  transition: 0.2s ease-in-out;
+}
+.relatedImage {
+  width: 150px;
+}
+.relatedTextContainer {
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  width: 100%;
+  position: relative;
+  top: 20px;
+  margin-left: 10px;
+}
+.relatedTextContainer h3,
+.relatedTextContainer p {
+  margin: 0;
+  color: #633511;
+}
+.relatedTextContainer h3 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.relatedTextContainer p {
+  font-size: 14px;
+}
+.relatedProductsContainer h2 {
+  color: #c27f40;
+  font-weight: 600;
+  font-size: 18px;
+  text-align: right;
+}

@@ -10,20 +10,24 @@ exports.createPages = async ({ graphql, actions }) => {
         nodes {
           frontmatter {
             productId
+            relatedProducts
           }
         }
       }
     }
   `);
 
+  if (result.errors) {
+    throw result.errors;
+  }
   // Recorre los nodos y crea una página para cada producto
   result.data.allMarkdownRemark.nodes.forEach(node => {
     createPage({
       path: `/productos/${node.frontmatter.productId}`,
-      component: path.resolve("./src/templates/product.js"),
+      component: path.resolve(__dirname, "./src/templates/product.js"),
       context: {
-        // Pasamos el productId como variable para la consulta GraphQL en el archivo "producto.js"
         productId: node.frontmatter.productId,
+        relatedProducts: node.frontmatter.relatedProducts,
       },
     });
   });
