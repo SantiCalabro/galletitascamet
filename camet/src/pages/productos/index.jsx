@@ -4,7 +4,7 @@ import { graphql, Link } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import * as P from "../../styles/Products.module.css";
 import Img from "gatsby-image";
-import WhatsappButton from "../../components/WhatsappButton.jsx";
+import WhatsappButtonLarge from "../../components/WhatsappButtonLarge.jsx";
 
 export default function Productos({ data }) {
   const cards = data.allMarkdownRemark.nodes;
@@ -48,7 +48,7 @@ export default function Productos({ data }) {
           })}
         </div>
         <div className={P.whatsapp}>
-          <WhatsappButton
+          <WhatsappButtonLarge
             phoneNumber="+542213085752"
             message={"Hola, quiero más información"}
             text={"Hacenos tu pregunta"}

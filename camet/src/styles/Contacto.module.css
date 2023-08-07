@@ -1,0 +1,120 @@
+.headerContainer {
+  margin-top: 110px;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+}
+
+.formContainer {
+  padding-bottom: 30px;
+  width: 80vw;
+  display: flex;
+}
+.fields {
+  width: 50%;
+  margin: 0;
+}
+.titleContainer {
+  width: 80vw;
+  border-bottom: solid 1px #633511;
+}
+.titleContainer h3 {
+  font-weight: 600;
+  color: #633511;
+  font-size: 25px;
+}
+.subtitle {
+  display: flex;
+  width: 90vw;
+  padding-top: 30px;
+}
+.subtitle h5 {
+  color: #633511;
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.inputsContainer {
+  margin-top: 20px;
+  width: fit-content;
+  margin-left: 0;
+}
+.field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+.field span {
+  margin: 0;
+  color: #633511;
+  font-size: 14px;
+}
+.field input,
+.field textarea {
+  width: 30vw;
+  background-color: transparent;
+  border: solid 1px #633511;
+  outline: 0;
+  font-size: 14px;
+  color: #633511;
+}
+.field textarea {
+  height: 100px;
+}
+.inputsContainer button {
+  float: right;
+  background-color: #633511;
+  outline: none;
+  border: solid 1px #633511;
+  color: #fff;
+  border-radius: 8px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 4px;
+  cursor: pointer;
+}
+
+.inputsContainer button:hover {
+  background-color: transparent;
+  color: #633511;
+  transition: 0.15s ease-in-out;
+}
+.socialMediaContainer {
+  padding-top: 80px;
+  width: 30%;
+}
+.whatsappBtn {
+  border-bottom: solid 1px #633511;
+  width: fit-content;
+  padding-bottom: 10px;
+  margin: 0;
+}
+.socialMedia {
+  display: flex;
+  flex-direction: column;
+}
+.socialMedia h5 {
+  color: #633511;
+  font-weight: 600;
+  font-size: 16px;
+  margin-left: 0;
+  margin-top: 15px;
+}
+.icons {
+  width: fit-content;
+  display: flex;
+  margin-left: 0;
+}
+.icons svg {
+  fill: #633511;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.icons svg:hover {
+  fill: #ff7d00;
+  transition: 0.15s ease-in-out;
+}

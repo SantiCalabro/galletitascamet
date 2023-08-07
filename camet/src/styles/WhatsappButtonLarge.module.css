@@ -1,29 +1,36 @@
 .container {
-  width: 50px;
-  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 5px;
-  padding: 5px;
+  border-radius: 10px;
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   background-color: #633511;
+  border: solid 1px #633511;
 }
 .container svg {
   fill: #fff;
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
 }
 .container:hover {
-  background-color: #fff;
+  background-color: transparent;
   transition: 0.1s ease-in-out;
 }
 .container:hover .icon {
   fill: #633511;
 }
-.container span {
-  display: none;
+.container:hover span {
+  color: #633511;
 }
-
+.container span {
+  color: #fff;
+  margin-left: 10px;
+  font-weight: 600;
+  font-size: 14px;
+}
 @media screen and (max-width: 767px) {
   .container span {
     display: inline-block;
