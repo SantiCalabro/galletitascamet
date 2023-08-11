@@ -16,6 +16,15 @@
   width: 50%;
   margin: 0;
 }
+.fieldLabel {
+  width: 100%;
+  display: flex;
+}
+.fieldLabel label {
+  margin-right: 0;
+  color: #633511;
+  font-size: 12px;
+}
 .titleContainer {
   width: 80vw;
   border-bottom: solid 1px #633511;
@@ -51,6 +60,7 @@
   margin: 0;
   color: #633511;
   font-size: 14px;
+  font-weight: 600;
 }
 .field input,
 .field textarea {
@@ -117,4 +127,116 @@
 .icons svg:hover {
   fill: #ff7d00;
   transition: 0.15s ease-in-out;
+}
+.disableBtn {
+  border: gray !important;
+  background-color: gray !important;
+}
+.disableBtn:hover {
+  cursor: default;
+  border: gray;
+  background-color: gray;
+  color: #fff !important;
+}
+.popupContainer {
+  background-color: hsl(0, 0%, 0%, 0.8);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  z-index: 600;
+}
+.popup {
+  background-color: #e5e5e5;
+  padding: 30px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: -150px;
+}
+.popup button {
+  outline: 0;
+  background-color: #633511;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 8px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+.popup button:hover {
+  transition: 0.15s ease-in-out;
+  background-color: #ff7d00;
+}
+.popup h3 {
+  color: #633511;
+  font-weight: 600;
+}
+.popup p {
+  color: #633511;
+}
+.hide {
+  display: none;
+}
+.headerContainerResponsive {
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  .headerContainerResponsive {
+    display: block;
+  }
+  .headerContainer {
+    display: none;
+  }
+  .titleContainer {
+    width: 80vw;
+  }
+  .titleContainer h3 {
+    text-align: center;
+    font-size: 22px;
+  }
+  .subtitle {
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    width: 80vw;
+  }
+  .subtitle h5 {
+    text-align: center;
+    font-size: 16px;
+  }
+  .container {
+    flex-direction: column;
+  }
+  .fields {
+    width: 100%;
+    padding-bottom: 20px;
+    border-bottom: solid 1px #633511;
+  }
+  .field input,
+  .field textarea {
+    width: 80vw;
+  }
+  .socialMediaContainer {
+    width: 80vw;
+    padding-top: 20px;
+  }
+
+  .formContainer {
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+  }
+  .whatsappBtn {
+    width: 80vw;
+  }
+  .socialMedia h5,
+  .icons,
+  .whatsappBtn {
+    margin-left: auto;
+  }
 }
