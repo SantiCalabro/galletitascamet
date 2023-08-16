@@ -1,5 +1,5 @@
 .headerContainer {
-  margin-top: 110px;
+  margin-top: 80px;
 }
 .container {
   display: flex;
@@ -9,7 +9,7 @@
 
 .formContainer {
   padding-bottom: 30px;
-  width: 80vw;
+  width: 100vw;
   display: flex;
 }
 .fields {
@@ -74,6 +74,12 @@
 .field textarea {
   height: 100px;
 }
+.field select {
+  background-color: transparent;
+  border: solid 1px #633511;
+  font-size: 14px;
+  color: #633511;
+}
 .inputsContainer button {
   float: right;
   background-color: #633511;
@@ -94,8 +100,20 @@
   transition: 0.15s ease-in-out;
 }
 .socialMediaContainer {
-  padding-top: 80px;
+  padding-top: 30px;
   width: 30%;
+  margin-left: 125px;
+}
+.headingText {
+  margin-bottom: 40px;
+}
+.headingText h3,
+.headingText p {
+  color: #633511;
+}
+.headingText h3 {
+  font-size: 18px;
+  font-weight: 600;
 }
 .whatsappBtn {
   border-bottom: solid 1px #633511;
@@ -221,9 +239,20 @@
   .field textarea {
     width: 80vw;
   }
+  .headingText h3,
+  .headingText p {
+    text-align: center;
+  }
+  .headingText p {
+    width: 85%;
+  }
   .socialMediaContainer {
     width: 80vw;
     padding-top: 20px;
+    padding-bottom: 20px;
+    margin-left: auto;
+    border-bottom: solid 1px #633511;
+    margin-bottom: 50px;
   }
 
   .formContainer {

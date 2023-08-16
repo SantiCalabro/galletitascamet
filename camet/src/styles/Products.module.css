@@ -45,13 +45,12 @@
 .itemContainer {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 50px;
+  gap: 60px;
   width: 70%;
   margin-top: 30px;
+  margin-left: auto !important;
 }
 .item {
-  margin-left: 50px;
-  margin-right: 50px;
   margin-bottom: 20px;
   display: flex;
   flex-direction: column;
@@ -69,7 +68,6 @@
 .item span {
   margin-top: 10px;
   font-size: 14px;
-
   color: #633511;
 }
 .whatsapp {
@@ -130,7 +128,8 @@
   .quality p {
     font-size: 14px;
   }
-  .itemContainer {
-    margin-top: 120px;
+
+  .titleContainer h3 {
+    margin-top: 70px;
   }
 }

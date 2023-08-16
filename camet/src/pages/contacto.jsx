@@ -11,6 +11,7 @@ export default function Contacto({ data }) {
     user_name: "",
     email: "",
     message: "",
+    topic: "",
   });
   const [error, setError] = useState({});
   const [disable, setDisable] = useState(true);
@@ -19,9 +20,10 @@ export default function Contacto({ data }) {
     user_name: "",
     email: "",
     message: "",
+    topic: "",
   };
 
-  const errorSeting = e => {
+  const errorSetting = e => {
     setError(
       handleValidate({
         ...input,
@@ -47,6 +49,9 @@ export default function Contacto({ data }) {
 
     if (!input.message) {
       errors.message = "*Colocá tu mensaje";
+    }
+    if (!input.topic || input.topic === "Elegí un asunto") {
+      errors.topic = "*Colocá un asunto";
     }
     if (
       !error.user_name &&
@@ -101,80 +106,18 @@ export default function Contacto({ data }) {
         <div className={C.titleContainer}>
           <h3>Ponete en contacto</h3>
         </div>
+
         <form onSubmit={handleSubmit} autoComplete="off">
           <div className={C.formContainer}>
-            <div className={C.fields}>
-              <div className={C.subtitle}>
-                <h5>Envianos tu consulta</h5>
-              </div>
-              <div className={C.inputsContainer}>
-                <div className={C.field}>
-                  <div className={C.fieldLabel}>
-                    <span>Nombre</span>
-                    {error.user_name && (
-                      <label htmlFor="">{error.user_name}</label>
-                    )}
-                  </div>
-                  <input
-                    type="text"
-                    name="user_name"
-                    value={input.user_name || ""}
-                    onChange={e => {
-                      handleChange(e);
-                      errorSeting(e);
-                    }}
-                    onBlur={e => {
-                      errorSeting(e);
-                    }}
-                  />
-                </div>
-                <div className={C.field}>
-                  <div className={C.fieldLabel}>
-                    <span>Correo electrónico</span>
-                    {error.email && <label htmlFor="">{error.email}</label>}
-                  </div>
-                  <input
-                    name="email"
-                    value={input.email || ""}
-                    type="text"
-                    onChange={e => {
-                      handleChange(e);
-                      errorSeting(e);
-                    }}
-                    onBlur={e => {
-                      errorSeting(e);
-                    }}
-                  />
-                </div>
-                <div className={C.field}>
-                  <div className={C.fieldLabel}>
-                    <span>Mensaje</span>
-                    {error.message && <label htmlFor="">{error.message}</label>}
-                  </div>
-                  <textarea
-                    name="message"
-                    value={input.message || ""}
-                    id=""
-                    cols="30"
-                    rows="10"
-                    onChange={e => {
-                      handleChange(e);
-                      errorSeting(e);
-                    }}
-                    onBlur={e => {
-                      errorSeting(e);
-                    }}
-                  />
-                </div>
-                <button
-                  onClick={e => disable && e.preventDefault()}
-                  className={disable && C.disableBtn}
-                >
-                  Enviar
-                </button>
-              </div>
-            </div>
             <div className={C.socialMediaContainer}>
+              <div className={C.headingText}>
+                <h3>Galletitas Camet</h3>
+                <p>Mar del Plata, Provincia de Buenos Aires</p>
+                <p>
+                  Ruta Provincial 2, km 392, Estación Camet, Provincia de Buenos
+                  Aires, Argentina.
+                </p>
+              </div>
               <div className={C.whatsappBtn}>
                 <WhatsappButtonLarge
                   phoneNumber="+542213085752"
@@ -201,6 +144,105 @@ export default function Contacto({ data }) {
                     <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm3 8h-1.35c-.538 0-.65.221-.65.778v1.222h2l-.209 2h-1.791v7h-3v-7h-2v-2h2v-2.308c0-1.769.931-2.692 3.029-2.692h1.971v3z" />
                   </svg>
                 </div>
+              </div>
+            </div>
+            <div className={C.fields}>
+              <div className={C.subtitle}>
+                <h5>Envianos tu consulta</h5>
+              </div>
+              <div className={C.inputsContainer}>
+                <div className={C.field}>
+                  <div className={C.fieldLabel}>
+                    <span>Nombre</span>
+                    {error.user_name && (
+                      <label htmlFor="">{error.user_name}</label>
+                    )}
+                  </div>
+                  <input
+                    type="text"
+                    name="user_name"
+                    value={input.user_name || ""}
+                    onChange={e => {
+                      handleChange(e);
+                      errorSetting(e);
+                    }}
+                    onBlur={e => {
+                      errorSetting(e);
+                    }}
+                  />
+                </div>
+                <div className={C.field}>
+                  <div className={C.fieldLabel}>
+                    <span>Correo electrónico</span>
+                    {error.email && <label htmlFor="">{error.email}</label>}
+                  </div>
+                  <input
+                    name="email"
+                    value={input.email || ""}
+                    type="text"
+                    onChange={e => {
+                      handleChange(e);
+                      errorSetting(e);
+                    }}
+                    onBlur={e => {
+                      errorSetting(e);
+                    }}
+                  />
+                </div>
+
+                <div className={C.field}>
+                  <div className={C.fieldLabel}>
+                    <span>Asunto</span>
+                    {error.topic && <label htmlFor="">{error.topic}</label>}
+                  </div>
+                  <select
+                    name="topic"
+                    value={input.topic}
+                    id="topic"
+                    onBlur={e => {
+                      handleChange(e);
+                      errorSetting(e);
+                    }}
+                    onChange={e => {
+                      handleChange(e);
+                      errorSetting(e);
+                    }}
+                  >
+                    <option defaultValue={"DEFAULT"}>Elegí un asunto</option>
+                    <option>Soy consumidor</option>
+                    <option>Soy proveedor</option>
+                    <option>Tengo un comercio mayorista</option>
+                    <option>Tengo una tienda minorista</option>
+                    <option>Otros</option>
+                  </select>
+                </div>
+
+                <div className={C.field}>
+                  <div className={C.fieldLabel}>
+                    <span>Mensaje</span>
+                    {error.message && <label htmlFor="">{error.message}</label>}
+                  </div>
+                  <textarea
+                    name="message"
+                    value={input.message || ""}
+                    id=""
+                    cols="30"
+                    rows="10"
+                    onChange={e => {
+                      handleChange(e);
+                      errorSetting(e);
+                    }}
+                    onBlur={e => {
+                      errorSetting(e);
+                    }}
+                  />
+                </div>
+                <button
+                  onClick={e => disable && e.preventDefault()}
+                  className={disable && C.disableBtn}
+                >
+                  Enviar
+                </button>
               </div>
             </div>
           </div>

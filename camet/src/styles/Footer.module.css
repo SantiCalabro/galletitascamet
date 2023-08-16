@@ -1,11 +1,113 @@
 .container {
   background-color: #633511;
-  height: 100px;
   width: 100vw;
   padding-top: 20px;
-  display: flex;
+  padding-bottom: 20px;
 }
-.container img {
+.firstRow {
+  display: flex;
+  border-bottom: solid 1px #ff7d00;
+  padding-bottom: 10px;
+  width: 90vw;
+  height: fit-content;
+}
+.logoContainer {
+  display: flex;
+  width: fit-content;
+  margin-left: 0px;
+}
+.logoContainer img {
+  width: 200px;
+}
+.secondRow {
+  display: flex;
+  width: 90vw;
+  padding-top: 30px;
+}
+.linksContainer {
+  display: flex;
+  margin-left: 0;
+}
+
+.linksContainer li {
+  text-decoration: none;
+  color: #fff;
+  list-style: none;
+  font-size: 14px;
+}
+.linksContainer li:hover {
+  color: #ff7d00;
+  transition: 0.15s ease-in-out;
+}
+
+.column {
   margin-right: 50px;
-  height: 50px;
+}
+.adress {
+  color: #fff;
+  padding-left: 20px;
+  border-left: solid 1px #fff;
+  margin-left: 20px;
+}
+.adress p {
+  font-size: 14px;
+  font-weight: 200;
+}
+
+.socialMedia {
+  width: 30vw;
+}
+.socialMedia svg {
+  float: right;
+  margin-left: 15px;
+  cursor: pointer;
+  fill: #fffbe4;
+}
+.socialMedia svg:hover {
+  fill: #ff7d00;
+  transition: 0.15s ease-in-out;
+}
+.firstLine {
+  font-weight: 500 !important;
+}
+@media screen and (max-width: 767px) {
+  .logoContainer {
+    margin: auto;
+  }
+  .secondRow {
+    flex-direction: column;
+  }
+  .linksContainer {
+    margin: auto;
+    width: 80vw;
+  }
+  .column {
+    margin: auto;
+  }
+
+  .adress {
+    padding: auto;
+    margin: auto;
+    margin-top: 30px;
+    border-left: none;
+    border-top: solid 1px #fff;
+    padding: 0;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+  }
+
+  .adress p {
+    text-align: center;
+    width: 100%;
+  }
+  .socialMedia {
+    width: 40vw;
+    display: flex;
+  }
+  .socialMedia svg {
+    float: none;
+    margin: auto;
+  }
 }

@@ -172,13 +172,28 @@
   }
   .relatedProductsContainer {
     margin: auto;
-    width: 80vw;
   }
-  .relatedProductsContainer h2 {
-    color: #633511;
-  }
+
   .relatedProduct {
     height: 140px;
     align-items: center;
+  }
+  .productsContainer {
+    flex-direction: column;
+  }
+  .relatedProduct {
+    width: 90vw;
+  }
+  .aditionalInfo {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border: none;
+    margin: auto;
+    padding: none;
+  }
+  .aditionalInfo h5,
+  .aditionalInfo p {
+    text-align: center;
   }
 }
