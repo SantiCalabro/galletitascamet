@@ -3,6 +3,7 @@
   padding-top: 50px;
   padding-bottom: 50px;
   display: flex;
+  width: 90vw;
 }
 .imgContainer {
   display: flex;
@@ -39,21 +40,33 @@
   height: fit-content;
   position: relative;
   top: 100px;
-  right: 80px;
+  right: 130px;
   width: 32vw;
   padding-right: 30px;
   padding-top: 25px;
   padding-bottom: 10px;
-  padding-left: 120px;
+  padding-left: 150px;
   display: flex;
 }
-.relatedProductsContainer {
-  margin-right: 30px;
+.aditionalInfo {
+  border-left: solid 5px #633511;
+  padding-left: 10px;
+  height: fit-content;
+  margin-top: 20px;
+}
+.aditionalInfo h5 {
+  color: #633511;
+}
+.aditionalInfo p {
+  color: #212121;
 }
 
 .relatedProduct {
   background-color: #fff;
-  padding: 15px;
+  height: 170px;
+  width: 350px;
+  align-items: center;
+  padding-left: 15px;
   border-radius: 10px;
   display: flex;
   cursor: pointer;
@@ -83,7 +96,7 @@
   display: flex;
   flex-direction: column;
   height: fit-content;
-  width: 100%;
+  width: fit-content;
   position: relative;
   top: 20px;
   margin-left: 10px;
@@ -92,18 +105,80 @@
 .relatedTextContainer p {
   margin: 0;
   color: #633511;
+  width: fit-content;
 }
 .relatedTextContainer h3 {
   font-size: 18px;
+
+  width: fit-content;
   font-weight: 600;
 }
 
 .relatedTextContainer p {
   font-size: 14px;
+  width: 85%;
+}
+.productsContainer {
+  display: flex;
+}
+.relatedProductsContainer {
+  background-color: #784312;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 .relatedProductsContainer h2 {
-  color: #c27f40;
+  color: #fff;
   font-weight: 600;
   font-size: 18px;
-  text-align: right;
+  text-align: center;
+  padding-bottom: 10px;
+}
+@media screen and (max-width: 767px) {
+  .container {
+    flex-direction: column;
+  }
+  .imgContainer {
+    flex-direction: column;
+    margin: auto;
+    width: 80vw;
+  }
+
+  .textBackground {
+    border-radius: none;
+    position: auto;
+    top: -70px;
+    right: auto;
+    width: 80vw;
+    padding: 0;
+    padding-top: 80px;
+    padding-left: 20px;
+    padding-right: 20px;
+    justify-content: center;
+  }
+
+  .textContainer {
+    float: auto;
+    width: 80vw;
+    margin: auto;
+  }
+  .img {
+    width: 60vw;
+  }
+  .imgContainer h1,
+  .imgContainer p,
+  .description {
+    text-align: center;
+    width: 100%;
+  }
+  .relatedProductsContainer {
+    margin: auto;
+    width: 80vw;
+  }
+  .relatedProductsContainer h2 {
+    color: #633511;
+  }
+  .relatedProduct {
+    height: 140px;
+    align-items: center;
+  }
 }

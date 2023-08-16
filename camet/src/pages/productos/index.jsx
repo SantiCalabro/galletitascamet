@@ -12,6 +12,20 @@ export default function Productos({ data }) {
   return (
     <Layout>
       <div className={P.container}>
+        <div className={P.qualityContainer}>
+          <div className={P.quality}>
+            <h3>Para tu mesa, lo mejor</h3>
+            <p>
+              Nuestro compromiso con la salud va más allá de la calidad de los
+              ingredientes. Trabajamos en estrecha colaboración con expertos en
+              nutrición y salud para desarrollar productos que sean beneficiosos
+              para tu bienestar. Nuestro objetivo es brindarte opciones
+              alimentarias saludables que te ayuden a mantener un estilo de vida
+              equilibrado y activo.
+            </p>
+          </div>
+        </div>
+
         <div className={P.desktopHeader}>
           <Img
             fluid={data.desktopBanner.childImageSharp.fluid}
@@ -75,7 +89,7 @@ export const query = graphql`
         }
       }
     }
-    allMarkdownRemark {
+    allMarkdownRemark(sort: { fields: [frontmatter___productId], order: ASC }) {
       nodes {
         id
         frontmatter {
@@ -83,7 +97,7 @@ export const query = graphql`
           productId
           image {
             childImageSharp {
-              gatsbyImageData(width: 150)
+              gatsbyImageData
             }
           }
         }

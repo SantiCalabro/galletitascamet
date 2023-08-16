@@ -9,7 +9,7 @@ export default function ProductsPreview() {
       salt: "Con y sin sal",
     },
     {
-      variety: "Integrales",
+      variety: "Salvado",
       salt: "Con y sin sal",
     },
     {

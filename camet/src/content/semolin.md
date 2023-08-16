@@ -1,5 +1,6 @@
 ---
 title: Semolín
+sal: si
 description: Bolzón 450 gr | Con sal
 image: ../images/Semolin_450gr.png
 ideals: Lorem ipsum dolor sit amet

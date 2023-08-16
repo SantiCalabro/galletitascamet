@@ -17,6 +17,7 @@ const ProductoTemplate = ({ data }) => {
           <div className={P.img}>
             <GatsbyImage image={image} alt={card.frontmatter.title} />
           </div>
+
           <div className={P.textBackground}>
             <div className={P.textContainer}>
               <h1>{card.frontmatter.title}</h1>
@@ -28,32 +29,42 @@ const ProductoTemplate = ({ data }) => {
             </div>
           </div>
         </div>
-        <div className={P.relatedProductsContainer}>
-          <h2>Más opciones para tu mesa</h2>
-          <div className={P.productsContainer}>
-            {data.relatedProducts.nodes.map(product => (
-              <Link to={`/productos/${product.frontmatter.productId}`}>
-                <div
-                  key={product.frontmatter.productId}
-                  className={P.relatedProduct}
-                >
-                  <div className={P.relatedImage}>
-                    <GatsbyImage
-                      image={getImage(
-                        product.frontmatter.image.childImageSharp
-                          .gatsbyImageData
-                      )}
-                      alt={product.frontmatter.title}
-                    />
-                  </div>
-                  <div className={P.relatedTextContainer}>
-                    <h3>{product.frontmatter.title}</h3>
-                    <p>{product.frontmatter.description}</p>
-                  </div>
+        <div className={P.aditionalInfo}>
+          <h5>
+            Productos <strong>sin octógonos.</strong>
+          </h5>
+          <p>
+            En Camet, te garantizamos que nuestros productos no llevan ningún
+            octógono de advertencia. Creemos en la transparencia y en
+            proporcionar productos que puedas consumir con total confianza y
+            tranquilidad.
+          </p>
+        </div>
+      </div>
+      <div className={P.relatedProductsContainer}>
+        <h2>Más opciones para tu mesa</h2>
+        <div className={P.productsContainer}>
+          {data.relatedProducts.nodes.map(product => (
+            <Link to={`/productos/${product.frontmatter.productId}`}>
+              <div
+                key={product.frontmatter.productId}
+                className={P.relatedProduct}
+              >
+                <div className={P.relatedImage}>
+                  <GatsbyImage
+                    image={getImage(
+                      product.frontmatter.image.childImageSharp.gatsbyImageData
+                    )}
+                    alt={product.frontmatter.title}
+                  />
                 </div>
-              </Link>
-            ))}
-          </div>
+                <div className={P.relatedTextContainer}>
+                  <h3>{product.frontmatter.title}</h3>
+                  <p>{product.frontmatter.description}</p>
+                </div>
+              </div>
+            </Link>
+          ))}
         </div>
       </div>
     </Layout>
@@ -93,9 +104,5 @@ export const query = graphql`
     }
   }
 `;
-// childImageSharp {
-//   fluid(maxWidth: 800) {
-//     ...GatsbyImageSharpFluid
-//   }
-// }
+
 export default ProductoTemplate;

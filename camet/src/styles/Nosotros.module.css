@@ -1,0 +1,64 @@
+.desktopHeader {
+  margin-top: 110px;
+}
+.desktopHeader h1 {
+  position: absolute;
+  top: 150px;
+  color: #fff;
+  z-index: 100;
+  font-weight: 600;
+  right: 100px;
+  font-size: 60px;
+}
+
+.sectionOne,
+.sectionThree {
+  display: flex;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 10vw;
+  padding-right: 10vw;
+}
+.textContainer {
+  width: 30vw;
+}
+.textContainer h3 {
+  font-weight: 600;
+  color: #633511;
+}
+.textContainer p {
+  color: #633511;
+}
+.picContainer {
+  width: 30vw;
+  max-height: 70vh;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+}
+.sectionTwo {
+  display: flex;
+  flex-direction: row-reverse;
+  background-color: #fff;
+  padding-top: 50px;
+  padding-bottom: 30px;
+  padding-left: 10vw;
+  padding-right: 10vw;
+}
+@media screen and (max-width: 767px) {
+  .sectionOne {
+    margin-top: 90px;
+  }
+  .sectionOne,
+  .sectionTwo,
+  .sectionThree {
+    flex-direction: column;
+  }
+  .textContainer,
+  .picContainer {
+    width: 80vw;
+  }
+  .desktopHeader {
+    display: none;
+  }
+}

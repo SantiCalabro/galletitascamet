@@ -1,0 +1,70 @@
+.titleContainer {
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+  padding-top: 50px;
+}
+.titleContainer h4 {
+  padding: 5px;
+  border-bottom: solid 1px #ff7d00;
+  color: #633511;
+  font-weight: 600;
+}
+
+.productsContainer {
+  display: flex;
+  width: 90vw;
+  margin-top: 50px;
+}
+
+.image {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 20px;
+  z-index: 600;
+}
+.itemTitle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: solid 1px #633511;
+  padding-top: 100px;
+  border-radius: 20px;
+  width: 20vw;
+  margin-top: -100px;
+}
+.itemTitle h5 {
+  font-weight: 600;
+}
+.itemTitle h5,
+.itemTitle p {
+  color: #633511;
+}
+.whatsappBtnContainer {
+  display: flex;
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
+.mobileHeader {
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  .desktopHeader {
+    display: none;
+  }
+  .mobileHeader {
+    display: block;
+  }
+  .titleContainer h4 {
+    font-size: 18px;
+  }
+  .productsContainer {
+    flex-direction: column;
+  }
+  .itemTitle {
+    width: 75vw;
+  }
+  .itemContainer {
+    margin-bottom: 25px;
+  }
+}
