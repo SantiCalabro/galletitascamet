@@ -3,7 +3,7 @@ title: Almuerzo
 sal: si
 description: Bolzón 450 gr | Con sal
 image: ../images/Almuerzo_450gr.png
-ideals: Lorem ipsum dolor sit amet
+ideals: untar con dulce de leche, o acompañar tus almuerzos.
 productId: "7"
-relatedProducts: ["2", "3", "4"]
+relatedProducts: ["8", "9", "6"]
 ---

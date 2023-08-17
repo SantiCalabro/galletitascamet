@@ -3,7 +3,11 @@ import Layout from "../layouts/index";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { graphql } from "gatsby";
 import * as N from "../styles/Nosotros.module.css";
-export default function nosotros({ data }) {
+import { useState } from "react";
+
+export default function Nosotros({ data }) {
+  const [pic, setPic] = useState("");
+
   const desktopHeader = getImage(
     data.desktopHeader.childImageSharp.gatsbyImageData
   );
@@ -14,12 +18,39 @@ export default function nosotros({ data }) {
   );
   return (
     <Layout>
+      {pic && (
+        <div className={N.popUpContainer}>
+          <div className={N.closeContainer}>
+            <svg
+              onClick={() => setPic("")}
+              clip-rule="evenodd"
+              fill-rule="evenodd"
+              stroke-linejoin="round"
+              stroke-miterlimit="2"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="m12 10.93 5.719-5.72c.146-.146.339-.219.531-.219.404 0 .75.324.75.749 0 .193-.073.385-.219.532l-5.72 5.719 5.719 5.719c.147.147.22.339.22.531 0 .427-.349.75-.75.75-.192 0-.385-.073-.531-.219l-5.719-5.719-5.719 5.719c-.146.146-.339.219-.531.219-.401 0-.75-.323-.75-.75 0-.192.073-.384.22-.531l5.719-5.719-5.72-5.719c-.146-.147-.219-.339-.219-.532 0-.425.346-.749.75-.749.192 0 .385.073.531.219z" />
+            </svg>
+          </div>
+
+          <div className={N.popUp}>
+            <GatsbyImage
+              image={pic}
+              alt="Fotografía histórica de Galletitas Camet"
+            />
+          </div>
+        </div>
+      )}
+
       <div className={N.desktopHeader}>
         <h1>Nosotros</h1>
-        <GatsbyImage
-          image={desktopHeader}
-          alt="Fotografía de la planta de Galletitas Camet"
-        />
+        <div>
+          <GatsbyImage
+            image={desktopHeader}
+            alt="Fotografía de la planta de Galletitas Camet"
+          />
+        </div>
       </div>
       <div>
         <div className={N.sectionOne}>
@@ -35,7 +66,7 @@ export default function nosotros({ data }) {
               creciendo, como lo hacemos desde 1978.
             </p>
           </div>
-          <div className={N.picContainer}>
+          <div onClick={() => setPic(somosCamet)} className={N.picContainer}>
             <GatsbyImage
               image={somosCamet}
               alt="Fotografía de Carlos trabajando con la amasadora"
@@ -57,7 +88,7 @@ export default function nosotros({ data }) {
               esencia original.
             </p>
           </div>
-          <div className={N.picContainer}>
+          <div onClick={() => setPic(history)} className={N.picContainer}>
             <GatsbyImage
               image={history}
               alt="Carlos trabajando cortando las galletitas Camet"
@@ -76,7 +107,7 @@ export default function nosotros({ data }) {
               reconocida y querida en nuestra comunidad.
             </p>
           </div>
-          <div className={N.picContainer}>
+          <div onClick={() => setPic(marDelPlata)} className={N.picContainer}>
             <GatsbyImage
               image={marDelPlata}
               alt="Fotografía de la playa desde el Torreón del Monje"

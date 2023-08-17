@@ -35,6 +35,7 @@
   border-radius: 20px;
   overflow: hidden;
   display: flex;
+  cursor: pointer;
 }
 .sectionTwo {
   display: flex;
@@ -45,6 +46,38 @@
   padding-left: 10vw;
   padding-right: 10vw;
 }
+.popUpContainer {
+  position: fixed;
+  width: 100vw;
+  height: 100%;
+  z-index: 500;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgb(0, 0, 0, 0.8);
+  padding-bottom: 100px;
+}
+.closeContainer {
+  width: 50vw;
+  padding-bottom: 5px;
+}
+.closeContainer svg {
+  width: 25px;
+  float: right;
+  z-index: 600;
+  fill: #fff;
+  cursor: pointer;
+}
+.popUp {
+  width: 50vw;
+  height: 65vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 20px;
+}
+
 @media screen and (max-width: 767px) {
   .sectionOne {
     margin-top: 90px;
@@ -60,5 +93,24 @@
   }
   .desktopHeader {
     display: none;
+  }
+  .popUpContainer {
+    flex-direction: column;
+    justify-content: flex-start;
+    top: 60px;
+    padding-top: 40px;
+    padding-bottom: 0;
+  }
+  .closeContainer {
+    width: 90vw;
+    padding-bottom: 5px;
+  }
+
+  .popUp {
+    width: 90vw;
+    max-height: 50vh;
+    display: flex;
+    padding: 0;
+    background-color: transparent;
   }
 }
