@@ -3,7 +3,7 @@
 }
 .container {
   padding-bottom: 50px;
-  margin-top: 110px;
+  margin-top: 60px;
 }
 .qualityContainer {
   width: 100vw;
@@ -67,7 +67,7 @@
 }
 .item span {
   margin-top: 10px;
-  font-size: 14px;
+  font-size: 16 px;
   color: #633511;
 }
 .whatsapp {
@@ -77,6 +77,23 @@
   width: fit-content;
   height: 50px;
   width: 50px;
+  display: none;
+}
+.whatsappButton {
+  position: sticky;
+  top: 80vh;
+  float: right;
+  margin-right: 50px;
+  z-index: 100; /* Asegura que esté por encima de los otros componentes */
+  transition: 350ms ease-in-out;
+}
+.whatsappButtonBottom {
+  position: sticky;
+  top: 40vh;
+  float: right;
+  margin-right: 50px;
+  z-index: 100;
+  transition: 350ms ease-in;
 }
 
 @media screen and (max-width: 767px) {
@@ -90,6 +107,11 @@
     width: fit-content;
     height: unset;
     width: unset;
+    display: block;
+  }
+  .whatsappButton,
+  .whatsappButtonBottom {
+    display: none;
   }
 
   .desktopHeader {
@@ -100,6 +122,8 @@
   }
   .itemContainer {
     width: 100vw;
+    gap: 40px;
+    margin-top: 250px;
   }
   .whatsapp {
     position: relative;
@@ -115,15 +139,14 @@
   .productImage {
     height: fit-content;
   }
-  .itemContainer {
-    gap: 40px;
-  }
+
   .quality {
     width: 80vw;
     background-color: #fff;
     box-shadow: 0px 1px 12px -1px rgba(0, 0, 0, 0.3);
     -webkit-box-shadow: 0px 1px 12px -1px rgba(0, 0, 0, 0.3);
     -moz-box-shadow: 0px 1px 12px -1px rgba(0, 0, 0, 0.3);
+    margin-top: 200px;
   }
   .quality p {
     font-size: 14px;

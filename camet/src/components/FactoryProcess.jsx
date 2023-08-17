@@ -31,12 +31,7 @@ export default function FactoryProcess() {
       </div>
       <div className={F.itemContainer}>
         {items.map((el, i) => (
-          <div
-            className={
-              el.title === "El proceso de elaboración" ? F.itemReverse : F.item
-            }
-            key={i}
-          >
+          <div className={F.item} key={i}>
             <img src={el.img} alt="" />
             <div className={F.text}>
               <span>{el.title}</span>

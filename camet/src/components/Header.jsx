@@ -21,7 +21,7 @@ export default function Header() {
     <>
       <div className={H.container}>
         <div
-          onClick={HandleNav}
+          onClick={() => HandleNav}
           className={nav ? H.responsiveClosedMenu : H.responsiveMenu}
         >
           <span className={nav ? H.activeTop : H.top}></span>

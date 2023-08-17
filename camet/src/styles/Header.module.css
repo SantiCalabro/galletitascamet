@@ -78,6 +78,9 @@
 .responsiveMenu {
   display: none;
 }
+.activeMiddle {
+  display: block;
+}
 @media screen and (max-width: 767px) {
   .container {
     box-shadow: 0px 1px 12px -1px rgba(0, 0, 0, 0.59);

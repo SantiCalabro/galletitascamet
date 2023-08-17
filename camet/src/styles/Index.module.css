@@ -2,7 +2,27 @@
   display: none;
 }
 .desktopCarousel {
-  margin-top: 110px;
+  margin-top: 60px;
+}
+
+.whatsappButton {
+  position: sticky;
+  top: 80vh;
+  float: right;
+  margin-right: 50px;
+  z-index: 100; /* Asegura que esté por encima de los otros componentes */
+  transition: 350ms ease-in-out;
+}
+.whatsappButtonBottom {
+  position: sticky;
+  top: 50vh;
+  float: right;
+  margin-right: 50px;
+  z-index: 100;
+  transition: 350ms ease-in;
+}
+.responsiveWhatsappButton {
+  display: none;
 }
 @media screen and (max-width: 767px) {
   .desktopCarousel {
@@ -11,5 +31,13 @@
   .responsiveCarousel {
     display: block;
     margin-top: 80px;
+  }
+  .whatsappButton,
+  .whatsappButtonBottom {
+    display: none;
+  }
+  .responsiveWhatsappButton {
+    display: block;
+    margin-bottom: 30px;
   }
 }

@@ -21,7 +21,7 @@ export default function nosotros({ data }) {
           alt="Fotografía de la planta de Galletitas Camet"
         />
       </div>
-      <div className={N.container}>
+      <div>
         <div className={N.sectionOne}>
           <div className={N.textContainer}>
             <h3>Somos CAMET</h3>

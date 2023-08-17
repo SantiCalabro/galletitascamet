@@ -81,7 +81,7 @@ export default function Contacto({ data }) {
   const mobileBanner = getImage(data.mobileHeaderBanner);
   return (
     <Layout>
-      <div className={popMsg ? C.popupContainer : C.hidden}>
+      <div className={popMsg && C.popupContainer}>
         <div className={C.popup}>
           <h3>Mensaje enviado</h3>
           <p>Te responderemos a la brevedad</p>
@@ -120,7 +120,7 @@ export default function Contacto({ data }) {
               </div>
               <div className={C.whatsappBtn}>
                 <WhatsappButtonLarge
-                  phoneNumber="+542213085752"
+                  phoneNumber="+5492233550129"
                   message={"Hola, quiero más información"}
                 />
               </div>

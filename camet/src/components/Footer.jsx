@@ -55,7 +55,7 @@ export default function Footer() {
             2, km 392, Estación Camet, Provincia de Buenos Aires, Argentina.
           </p>
         </div>
-        <div className={F.social}>
+        <div>
           <div className={F.socialMedia}>
             <svg
               xmlns="http://www.w3.org/2000/svg"

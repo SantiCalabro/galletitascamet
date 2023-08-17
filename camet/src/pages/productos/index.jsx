@@ -5,12 +5,49 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import * as P from "../../styles/Products.module.css";
 import Img from "gatsby-image";
 import WhatsappButton from "../../components/WhatsappButton.jsx";
+import { useState, useEffect } from "react";
 
 export default function Productos({ data }) {
   const cards = data.allMarkdownRemark.nodes;
+  const [isBottom, setIsBottom] = useState(false);
+
+  // Agrega un event listener para detectar el scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      const windowHeight = window.innerHeight;
+      const footerHeight = 200; // Altura del footer en píxeles
+
+      // Calcula la posición del scroll en relación al footer
+      const scrollFromBottom =
+        document.body.scrollHeight - scrollPosition - windowHeight;
+
+      // Cambia el estado isBottom en función de la posición del scroll
+      setIsBottom(scrollFromBottom <= footerHeight);
+    };
+
+    // Agrega el listener al montar el componente
+    window.addEventListener("scroll", handleScroll);
+
+    // Limpia el listener al desmontar el componente
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <Layout>
+      <div
+        className={`${P.whatsappButton} ${
+          isBottom ? P.whatsappButtonBottom : ""
+        }`}
+      >
+        <WhatsappButton
+          phoneNumber="+5492233550129"
+          message={"Hola, quiero más información"}
+          text={"Hacenos tu pregunta"}
+        />
+      </div>
       <div className={P.container}>
         <div className={P.qualityContainer}>
           <div className={P.quality}>
@@ -63,7 +100,7 @@ export default function Productos({ data }) {
         </div>
         <div className={P.whatsapp}>
           <WhatsappButton
-            phoneNumber="+542213085752"
+            phoneNumber="+5492233550129"
             message={"Hola, quiero más información"}
             text={"Hacenos tu pregunta"}
           />

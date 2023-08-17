@@ -22,7 +22,7 @@ const ProductoTemplate = ({ data }) => {
             <div className={P.textContainer}>
               <h1>{card.frontmatter.title}</h1>
               <p className={P.description}>{card.frontmatter.description}</p>
-              <p className={P.ideals}>
+              <p>
                 <strong>Ideales para </strong>
                 {card.frontmatter.ideals}
               </p>
@@ -42,7 +42,7 @@ const ProductoTemplate = ({ data }) => {
         </div>
       </div>
       <div className={P.relatedProductsContainer}>
-        <h2>Más opciones para tu mesa</h2>
+        <h2>• Más opciones para tu mesa •</h2>
         <div className={P.productsContainer}>
           {data.relatedProducts.nodes.map(product => (
             <Link to={`/productos/${product.frontmatter.productId}`}>
