@@ -3,12 +3,14 @@
 }
 .container {
   padding-bottom: 50px;
-  margin-top: 60px;
 }
 .qualityContainer {
   width: 100vw;
   display: flex;
   justify-content: center;
+}
+.desktopHeader {
+  margin-top: 40px;
 }
 .quality {
   position: absolute;

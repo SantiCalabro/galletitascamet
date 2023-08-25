@@ -19,7 +19,7 @@ export default function Header() {
   const logoImageUrl = data.logoImage.publicURL;
   return (
     <>
-      <div className={H.container}>
+      <div id="header" className={H.container}>
         <div
           onClick={() => HandleNav()}
           className={nav ? H.responsiveClosedMenu : H.responsiveMenu}

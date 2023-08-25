@@ -13,7 +13,7 @@ export default function Footer() {
   const logoImageUrl = data.logoImage.publicURL;
 
   return (
-    <div className={F.container}>
+    <div id="footer" className={F.container}>
       <div className={F.firstRow}>
         <div className={F.logoContainer}>
           <Link to="/">

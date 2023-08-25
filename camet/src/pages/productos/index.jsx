@@ -11,25 +11,17 @@ export default function Productos({ data }) {
   const cards = data.allMarkdownRemark.nodes;
   const [isBottom, setIsBottom] = useState(false);
 
-  // Agrega un event listener para detectar el scroll
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
       const windowHeight = window.innerHeight;
-      const footerHeight = 200; // Altura del footer en píxeles
-
-      // Calcula la posición del scroll en relación al footer
+      const footerHeight = 200;
       const scrollFromBottom =
         document.body.scrollHeight - scrollPosition - windowHeight;
-
-      // Cambia el estado isBottom en función de la posición del scroll
       setIsBottom(scrollFromBottom <= footerHeight);
     };
-
-    // Agrega el listener al montar el componente
     window.addEventListener("scroll", handleScroll);
 
-    // Limpia el listener al desmontar el componente
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };

@@ -2,7 +2,7 @@
   display: none;
 }
 .desktopCarousel {
-  margin-top: 60px;
+  margin-top: 40px;
 }
 
 .whatsappButton {
@@ -15,7 +15,7 @@
 }
 .whatsappButtonBottom {
   position: sticky;
-  top: 50vh;
+  top: 40vh;
   float: right;
   margin-right: 50px;
   z-index: 100;
