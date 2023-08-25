@@ -1,0 +1,150 @@
+.desktopHeader {
+  height: 100vh;
+  overflow: hidden;
+}
+.mobileHeader {
+  display: none;
+}
+.headerText {
+  position: absolute;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  top: 400px;
+  z-index: 600;
+}
+.headerText h1 {
+  font-size: 60px;
+  font-weight: 600;
+}
+.headerText h1,
+.headerText p {
+  color: #fff;
+  text-align: center;
+}
+.headerText p {
+  font-size: 18px;
+  width: 55vw;
+}
+.recipeContainer {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 80px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  width: 85vw;
+  border-radius: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0px 1px 12px -1px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0px 1px 12px -1px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0px 1px 12px -1px rgba(0, 0, 0, 0.25);
+}
+
+.firstRow {
+  display: flex;
+  width: 100%;
+}
+
+.picContainer {
+  width: 40vw;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-right: 0;
+}
+
+.picContainer img {
+  width: 100%;
+}
+.recipesList {
+  background-color: #fff;
+  padding-top: 50px;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+}
+.recipesList h4 {
+  font-weight: 600;
+  color: #633511;
+}
+.recipesList ul {
+  width: 90vw;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+.recipesList li a {
+  font-weight: 600;
+  color: #ff7d00;
+}
+.recipesList li a:hover {
+  transition: 0.15s ease-in-out;
+  color: #633511;
+}
+.recipe {
+  margin-top: 30px;
+  width: 100%;
+  border-top: solid 1px #633511;
+  padding-top: 20px;
+}
+.recipe p {
+  margin: 0;
+}
+.textContainer {
+  margin: 0;
+}
+
+.textContainer h3 {
+  width: 350px;
+  margin: 0;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #633511;
+}
+.ingredients {
+  width: 400px;
+}
+strong {
+  color: #633511;
+}
+@media screen and (max-width: 767px) {
+  .mobileHeader {
+    display: block;
+    margin-top: 80px;
+  }
+  .desktopHeader {
+    display: none;
+  }
+  .headerText {
+    position: absolute;
+    left: auto;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    top: 320px;
+    padding: 0;
+    padding-right: 30px;
+    padding-left: 30px;
+    margin: auto;
+  }
+  .headerText h1,
+  .headerText p {
+    text-align: center;
+  }
+  .headerText p {
+    font-size: 14px;
+    width: auto;
+  }
+  .headerText h1 {
+    font-size: 30px;
+  }
+}
