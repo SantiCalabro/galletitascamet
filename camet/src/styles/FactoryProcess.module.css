@@ -2,7 +2,7 @@
   height: 400px;
   display: flex;
   flex-direction: column;
-  background-color: #fffbe4;
+  background-color: #fff;
   justify-content: center;
 }
 .title {

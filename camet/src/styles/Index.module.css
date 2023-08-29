@@ -24,6 +24,25 @@
 .responsiveWhatsappButton {
   display: none;
 }
+.nosotrosMobile {
+  display: none;
+}
+.nosotrosTextContainer {
+  display: flex;
+  width: 100vw;
+  flex-direction: column;
+  position: absolute;
+  z-index: 500;
+  margin-top: 300px;
+}
+.nosotrosTextContainer h3,
+.nosotrosTextContainer p {
+  color: #fff;
+}
+.nosotrosTextContainer h3 {
+  font-size: 40px;
+  font-weight: 600;
+}
 @media screen and (max-width: 767px) {
   .desktopCarousel {
     display: none;
@@ -39,5 +58,29 @@
   .responsiveWhatsappButton {
     display: block;
     margin-bottom: 30px;
+  }
+  .nosotrosDesktop {
+    display: none;
+  }
+  .nosotrosMobile {
+    display: block;
+  }
+
+  .nosotrosTextContainer {
+    display: flex;
+    width: 100vw;
+    flex-direction: column;
+    position: absolute;
+    z-index: 500;
+    margin-top: 200px;
+  }
+  .nosotrosTextContainer p {
+    width: 80vw;
+    text-align: center;
+    font-size: 16px;
+  }
+  .nosotrosTextContainer h3 {
+    font-size: 30px;
+    font-weight: 600;
   }
 }

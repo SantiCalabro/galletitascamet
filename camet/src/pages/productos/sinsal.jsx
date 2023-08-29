@@ -64,14 +64,14 @@ export const query = graphql`
   query {
     headerBanner: file(relativePath: { eq: "sin_sal_desktop_header.jpg" }) {
       childImageSharp {
-        gatsbyImageData
+        gatsbyImageData(layout: FULL_WIDTH, quality: 100, placeholder: BLURRED)
       }
     }
     headerMobileBanner: file(
       relativePath: { eq: "Sin_Sal_Mobile_Header.jpg" }
     ) {
       childImageSharp {
-        gatsbyImageData
+        gatsbyImageData(layout: FULL_WIDTH, quality: 100, placeholder: BLURRED)
       }
     }
     products: allMarkdownRemark(

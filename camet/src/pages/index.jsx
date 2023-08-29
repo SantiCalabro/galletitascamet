@@ -6,32 +6,28 @@ import { Carousel } from "react-bootstrap";
 import "../styles/global.css";
 import { graphql, Link } from "gatsby";
 import Img from "gatsby-image";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import FactoryProcess from "../components/FactoryProcess";
 import * as I from "../styles/Index.module.css";
 import ProductsPreview from "../components/ProductsPreview";
 import WhatsappButton from "../components/WhatsappButton";
 export default function Home({ data }) {
   const [isBottom, setIsBottom] = useState(false);
-
-  // Agrega un event listener para detectar el scroll
+  const desktopBanner = getImage(data.nosotrosDesktopImg);
+  const mobileBanner = getImage(data.nosotrosMobileImg);
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
       const windowHeight = window.innerHeight;
-      const footerHeight = 400; // Altura del footer en píxeles
-
-      // Calcula la posición del scroll en relación al footer
+      const footerHeight = 400;
       const scrollFromBottom =
         document.body.scrollHeight - scrollPosition - windowHeight;
 
-      // Cambia el estado isBottom en función de la posición del scroll
       setIsBottom(scrollFromBottom <= footerHeight);
     };
 
-    // Agrega el listener al montar el componente
     window.addEventListener("scroll", handleScroll);
 
-    // Limpia el listener al desmontar el componente
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -68,10 +64,13 @@ export default function Home({ data }) {
             </Link>
           </Carousel.Item>
           <Carousel.Item>
-            <Img
-              fluid={data.slide01ql.childImageSharp.fluid}
-              alt="Tradición marplatense"
-            />
+            <Link to="/nosotros">
+              {" "}
+              <Img
+                fluid={data.slide01ql.childImageSharp.fluid}
+                alt="Tradición marplatense"
+              />
+            </Link>
           </Carousel.Item>
         </Carousel>
       </div>
@@ -111,6 +110,26 @@ export default function Home({ data }) {
           text={"Hacenos tu pregunta"}
         />
       </div>
+      <Link to="/nosotros">
+        <div className={I.nosotrosContainer}>
+          <div className={I.nosotrosTextContainer}>
+            <h3>Nuestra fábrica</h3>
+            <p>Conocé la historia de las galletitas marplatenses favoritas</p>
+          </div>
+          <div className={I.nosotrosDesktop}>
+            <GatsbyImage
+              image={desktopBanner}
+              alt="Fotografìa de la línea de producción de Galletitas Camet"
+            />
+          </div>
+          <div className={I.nosotrosMobile}>
+            <GatsbyImage
+              image={mobileBanner}
+              alt="Fotografìa de la línea de producción de Galletitas Camet"
+            />
+          </div>
+        </div>
+      </Link>
     </Layout>
   );
 }
@@ -157,6 +176,17 @@ export const query = graphql`
         fluid(maxWidth: 1440, quality: 100) {
           ...GatsbyImageSharpFluid
         }
+      }
+    }
+
+    nosotrosDesktopImg: file(relativePath: { eq: "produccion2.jpg" }) {
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH, quality: 100)
+      }
+    }
+    nosotrosMobileImg: file(relativePath: { eq: "produccion2_mobile.jpg" }) {
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH, quality: 100)
       }
     }
   }

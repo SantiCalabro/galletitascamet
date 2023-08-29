@@ -14,10 +14,9 @@
 }
 .quality {
   position: absolute;
-  top: 150px;
+  top: 380px;
   padding: 20px;
   border-radius: 20px;
-  background-color: rgb(255, 255, 255, 0.8);
   z-index: 150;
   width: 50vw;
 }
@@ -27,7 +26,7 @@
 .quality h3,
 .quality p {
   text-align: center;
-  color: #000;
+  color: #fff;
 }
 
 .titleContainer {
@@ -125,7 +124,6 @@
   .itemContainer {
     width: 100vw;
     gap: 40px;
-    margin-top: 250px;
   }
   .whatsapp {
     position: relative;
@@ -134,6 +132,9 @@
     padding-top: 30px;
     border-top: solid 1px #633511;
     width: 80%;
+  }
+  .titleContainer {
+    margin-top: 250px;
   }
   .titleContainer h3 {
     width: 80%;
@@ -148,7 +149,7 @@
     box-shadow: 0px 1px 12px -1px rgba(0, 0, 0, 0.3);
     -webkit-box-shadow: 0px 1px 12px -1px rgba(0, 0, 0, 0.3);
     -moz-box-shadow: 0px 1px 12px -1px rgba(0, 0, 0, 0.3);
-    margin-top: 200px;
+    position: absolute;
   }
   .quality p {
     font-size: 14px;
@@ -156,5 +157,10 @@
 
   .titleContainer h3 {
     margin-top: 70px;
+  }
+  .quality h3,
+  .quality p {
+    text-align: center;
+    color: #633511;
   }
 }
