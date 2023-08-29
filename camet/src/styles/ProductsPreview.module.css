@@ -38,25 +38,25 @@
   margin-top: -15px;
 }
 .btn {
-  background-color: transparent;
+  background-color: #fff;
   border: none;
   border: solid 1px #fff;
-  font-weight: 200;
+  font-weight: 600;
   font-size: 14px;
-  border-radius: 5px;
+  border-radius: 25px;
   width: fit-content;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
   padding-top: 5px;
   padding-bottom: 5px;
-  color: #fff;
+  color: #633511;
   cursor: pointer;
 }
 .btn:hover {
-  background-color: #fff;
-  color: #633511;
+  background-color: #ff7d00;
+  border: solid 1px #ff7d00;
   transition: 0.15s ease-in-out;
-  font-weight: 400;
+  color: #fff;
 }
 .btnContainer {
   margin-top: 40px;

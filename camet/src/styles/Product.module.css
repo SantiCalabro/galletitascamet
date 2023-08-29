@@ -200,4 +200,17 @@
   .aditionalInfo p {
     text-align: center;
   }
+  .relatedImage {
+    width: 32%;
+    margin-left: 0;
+  }
+  .relatedTextContainer {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    width: 60%;
+    position: relative;
+    top: 20px;
+    margin-left: 10px;
+  }
 }

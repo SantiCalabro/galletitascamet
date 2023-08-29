@@ -11,6 +11,9 @@ export default function Nosotros({ data }) {
   const desktopHeader = getImage(
     data.desktopHeader.childImageSharp.gatsbyImageData
   );
+  const mobileHeader = getImage(
+    data.mobileHeader.childImageSharp.gatsbyImageData
+  );
   const somosCamet = getImage(data.somosCamet.childImageSharp.gatsbyImageData);
   const history = getImage(data.historia.childImageSharp.gatsbyImageData);
   const marDelPlata = getImage(
@@ -44,8 +47,17 @@ export default function Nosotros({ data }) {
       )}
 
       <div className={N.desktopHeader}>
-        <h1>Nosotros</h1>
-        <div>
+        <div className={N.titleContainer}>
+          <h1>Nosotros</h1>
+          <h5>Conocé la historia de las galletitas te acompañan cada día</h5>
+        </div>
+        <div className={N.mobileHeader}>
+          <GatsbyImage
+            image={mobileHeader}
+            alt="Fotografía de la planta de Galletitas Camet"
+          />
+        </div>
+        <div className={N.desktopBanner}>
           <GatsbyImage
             image={desktopHeader}
             alt="Fotografía de la planta de Galletitas Camet"
@@ -120,9 +132,14 @@ export default function Nosotros({ data }) {
 }
 export const query = graphql`
   query {
-    desktopHeader: file(relativePath: { eq: "prueba.png" }) {
+    desktopHeader: file(relativePath: { eq: "produccion1.jpg" }) {
       childImageSharp {
-        gatsbyImageData
+        gatsbyImageData(layout: FULL_WIDTH, quality: 100, placeholder: BLURRED)
+      }
+    }
+    mobileHeader: file(relativePath: { eq: "produccion1_mobile.jpg" }) {
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH, quality: 100, placeholder: BLURRED)
       }
     }
     somosCamet: file(relativePath: { eq: "somos_camet.jpg" }) {

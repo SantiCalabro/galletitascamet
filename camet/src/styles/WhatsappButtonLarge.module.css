@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 10px;
+  border-radius: 30px;
   padding-right: 15px;
   padding-left: 15px;
   padding-top: 5px;
@@ -38,7 +38,7 @@
     font-size: 14px;
   }
   .container {
-    border-radius: 10px;
+    border-radius: 30px;
     padding-left: 15px;
     padding-right: 15px;
     padding-top: 10px;

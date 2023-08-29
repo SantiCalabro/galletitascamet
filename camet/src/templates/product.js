@@ -81,7 +81,7 @@ export const query = graphql`
         ideals
         image {
           childImageSharp {
-            gatsbyImageData(layout: FULL_WIDTH)
+            gatsbyImageData(layout: FULL_WIDTH, quality: 100)
           }
         }
       }
@@ -96,7 +96,7 @@ export const query = graphql`
           description
           image {
             childImageSharp {
-              gatsbyImageData(layout: FULL_WIDTH)
+              gatsbyImageData(layout: FULL_WIDTH, quality: 100)
             }
           }
         }
