@@ -57,7 +57,8 @@
   }
   .responsiveWhatsappButton {
     display: block;
-    margin-bottom: 30px;
+    background-color: #fff;
+    padding-bottom: 40px;
   }
   .nosotrosDesktop {
     display: none;

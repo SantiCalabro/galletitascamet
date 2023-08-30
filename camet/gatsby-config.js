@@ -24,6 +24,12 @@ module.exports = {
       },
     },
     {
+      resolve: "gatsby-plugin-manifest",
+      options: {
+        icon: "static/gatsby-icon.png",
+      },
+    },
+    {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "cards",

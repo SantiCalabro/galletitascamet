@@ -81,6 +81,8 @@ export default function Home({ data }) {
               <Img
                 fluid={data.slide01ql_resp.childImageSharp.fluid}
                 alt="Línea sin sal"
+                loading="eager"
+                fadeIn={false}
               />
             </Link>
           </Carousel.Item>
@@ -120,12 +122,14 @@ export default function Home({ data }) {
             <GatsbyImage
               image={desktopBanner}
               alt="Fotografìa de la línea de producción de Galletitas Camet"
+              loading="eager"
             />
           </div>
           <div className={I.nosotrosMobile}>
             <GatsbyImage
               image={mobileBanner}
               alt="Fotografìa de la línea de producción de Galletitas Camet"
+              loading="eager"
             />
           </div>
         </div>

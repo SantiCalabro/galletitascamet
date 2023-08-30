@@ -53,7 +53,7 @@ export default function Sinsal({ data }) {
       </div>
       <div className={S.whatsappBtnContainer}>
         <WhatsappButtonLarge
-          phoneNumber="+542213085752"
+          phoneNumber="+5492233550129"
           message={"Hola, quiero más información"}
         />
       </div>
