@@ -87,6 +87,15 @@
   border-radius: 20px;
   padding: 20px;
 }
+.whatsapp {
+  position: fixed;
+  top: 450px;
+  right: 80px;
+  width: fit-content;
+  height: 50px;
+  width: 50px;
+  display: none;
+}
 
 @media screen and (max-width: 767px) {
   .mobileHeader {
@@ -138,5 +147,15 @@
     display: flex;
     padding: 0;
     background-color: transparent;
+  }
+  .whatsapp {
+    display: block;
+    position: relative;
+    top: 20px;
+    right: auto;
+    padding-top: 30px;
+    border-top: solid 1px #633511;
+    width: 80%;
+    padding-bottom: 100px;
   }
 }

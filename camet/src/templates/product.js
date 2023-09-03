@@ -3,6 +3,7 @@ import { graphql, Link } from "gatsby";
 import Layout from "../layouts/index";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import * as P from "../styles/Product.module.css";
+import WhatsappButton from "../components/WhatsappButtonLarge";
 
 const ProductoTemplate = ({ data }) => {
   const card = data.markdownRemark;
@@ -29,16 +30,21 @@ const ProductoTemplate = ({ data }) => {
             </div>
           </div>
         </div>
-        <div className={P.aditionalInfo}>
-          <h5>
-            Productos <strong>sin octógonos.</strong>
-          </h5>
-          <p>
-            En Camet, te garantizamos que nuestros productos no llevan ningún
-            octógono de advertencia. Creemos en la transparencia y en
-            proporcionar productos que puedas consumir con total confianza y
-            tranquilidad.
-          </p>
+        <div className={P.rightColumn}>
+          <div className={P.aditionalInfo}>
+            <h5>
+              Productos <strong>sin octógonos.</strong>
+            </h5>
+            <p>
+              En Camet, te garantizamos que nuestros productos no llevan ningún
+              octógono de advertencia. Creemos en la transparencia y en
+              proporcionar productos que puedas consumir con total confianza y
+              tranquilidad.
+            </p>
+          </div>
+          <div className={P.whatsapp}>
+            <WhatsappButton />
+          </div>
         </div>
       </div>
       <div className={P.relatedProductsContainer}>

@@ -3,7 +3,9 @@ import Layout from "../layouts/index";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { graphql } from "gatsby";
 import * as N from "../styles/Nosotros.module.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import WhatsappButton from "../components/WhatsappButton";
+import * as P from "../styles/Products.module.css";
 
 export default function Nosotros({ data }) {
   const [pic, setPic] = useState("");
@@ -19,6 +21,24 @@ export default function Nosotros({ data }) {
   const marDelPlata = getImage(
     data.marDelPlata.childImageSharp.gatsbyImageData
   );
+  const [isBottom, setIsBottom] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      const windowHeight = window.innerHeight;
+      const footerHeight = 200;
+      const scrollFromBottom =
+        document.body.scrollHeight - scrollPosition - windowHeight;
+      setIsBottom(scrollFromBottom <= footerHeight);
+    };
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <Layout>
       {pic && (
@@ -63,6 +83,17 @@ export default function Nosotros({ data }) {
             alt="Fotografía de la planta de Galletitas Camet"
           />
         </div>
+      </div>
+      <div
+        className={`${P.whatsappButton} ${
+          isBottom ? P.whatsappButtonBottom : ""
+        }`}
+      >
+        <WhatsappButton
+          phoneNumber="+5492233550129"
+          message={"Hola, quiero más información"}
+          text={"Hacenos tu pregunta"}
+        />
       </div>
       <div>
         <div className={N.sectionOne}>
@@ -126,6 +157,14 @@ export default function Nosotros({ data }) {
             />
           </div>
         </div>
+      </div>
+
+      <div className={N.whatsapp}>
+        <WhatsappButton
+          phoneNumber="+5492233550129"
+          message={"Hola, quiero más información"}
+          text={"Hacenos tu pregunta"}
+        />
       </div>
     </Layout>
   );

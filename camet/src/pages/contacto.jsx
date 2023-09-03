@@ -5,22 +5,24 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { graphql } from "gatsby";
 import WhatsappButtonLarge from "../components/WhatsappButtonLarge";
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
+import { useRef } from "react";
 
 export default function Contacto({ data }) {
   const [input, setInput] = useState({
-    user_name: "",
-    email: "",
+    from_name: "",
+    reply_to: "",
     message: "",
-    topic: "",
+    subject: "",
   });
   const [error, setError] = useState({});
   const [disable, setDisable] = useState(true);
   const [popMsg, setPopMsg] = useState(false);
   const initialState = {
-    user_name: "",
-    email: "",
+    from_name: "",
+    reply_to: "",
     message: "",
-    topic: "",
+    subject: "",
   };
 
   const errorSetting = e => {
@@ -38,27 +40,27 @@ export default function Contacto({ data }) {
   const handleValidate = input => {
     const errors = {};
     const regexEmail = /[-0-9a-zA-Z.+_]+@[-0-9a-zA-Z.+_]+\.[a-zA-Z]{2,4}/;
-    if (!input.user_name) {
-      errors.user_name = "*Colocá tu nombre";
+    if (!input.from_name) {
+      errors.from_name = "*Colocá tu nombre";
     }
-    if (!input.email) {
-      errors.email = "*Colocá tu correo electrónico";
-    } else if (!regexEmail.test(input.email)) {
-      errors.email = "*Colocá un email válido";
+    if (!input.reply_to) {
+      errors.reply_to = "*Colocá tu correo electrónico";
+    } else if (!regexEmail.test(input.reply_to)) {
+      errors.reply_to = "*Colocá un email válido";
     }
 
     if (!input.message) {
       errors.message = "*Colocá tu mensaje";
     }
-    if (!input.topic || input.topic === "Elegí un asunto") {
-      errors.topic = "*Colocá un asunto";
+    if (!input.subject || input.subject === "Elegí un asunto") {
+      errors.subject = "*Colocá un asunto";
     }
     if (
-      !error.user_name &&
-      !error.email &&
+      !error.from_name &&
+      !error.reply_to &&
       !error.message &&
-      input.user_name &&
-      input.email &&
+      input.from_name &&
+      input.reply_to &&
       input.message.length > 0
     ) {
       setDisable(false);
@@ -71,8 +73,25 @@ export default function Contacto({ data }) {
     setInput(initialState);
   };
 
+  const form = useRef();
+
   const handleSubmit = e => {
     e.preventDefault();
+    emailjs
+      .sendForm(
+        process.env.GATSBY_EMAILJS_SERVICE_ID,
+        process.env.GATSBY_EMAILJS_TEMPLATE_ID,
+        form.current,
+        process.env.GATSBY_EMAILJS_PUBLIC_KEY
+      )
+      .then(
+        result => {
+          console.log(result.text);
+        },
+        error => {
+          console.log(error.text);
+        }
+      );
     setPopMsg(true);
     clearState();
   };
@@ -107,7 +126,7 @@ export default function Contacto({ data }) {
           <h3>Ponete en contacto</h3>
         </div>
 
-        <form onSubmit={handleSubmit} autoComplete="off">
+        <form ref={form} onSubmit={handleSubmit} autoComplete="off">
           <div className={C.formContainer}>
             <div className={C.socialMediaContainer}>
               <div className={C.headingText}>
@@ -164,14 +183,14 @@ export default function Contacto({ data }) {
                 <div className={C.field}>
                   <div className={C.fieldLabel}>
                     <span>Nombre</span>
-                    {error.user_name && (
-                      <label htmlFor="">{error.user_name}</label>
+                    {error.from_name && (
+                      <label htmlFor="">{error.from_name}</label>
                     )}
                   </div>
                   <input
                     type="text"
-                    name="user_name"
-                    value={input.user_name || ""}
+                    name="from_name"
+                    value={input.from_name || ""}
                     onChange={e => {
                       handleChange(e);
                       errorSetting(e);
@@ -184,11 +203,13 @@ export default function Contacto({ data }) {
                 <div className={C.field}>
                   <div className={C.fieldLabel}>
                     <span>Correo electrónico</span>
-                    {error.email && <label htmlFor="">{error.email}</label>}
+                    {error.reply_to && (
+                      <label htmlFor="">{error.reply_to}</label>
+                    )}
                   </div>
                   <input
-                    name="email"
-                    value={input.email || ""}
+                    name="reply_to"
+                    value={input.reply_to || ""}
                     type="text"
                     onChange={e => {
                       handleChange(e);
@@ -203,12 +224,12 @@ export default function Contacto({ data }) {
                 <div className={C.field}>
                   <div className={C.fieldLabel}>
                     <span>Asunto</span>
-                    {error.topic && <label htmlFor="">{error.topic}</label>}
+                    {error.subject && <label htmlFor="">{error.subject}</label>}
                   </div>
                   <select
-                    name="topic"
-                    value={input.topic}
-                    id="topic"
+                    name="subject"
+                    value={input.subject}
+                    id="subject"
                     onBlur={e => {
                       handleChange(e);
                       errorSetting(e);

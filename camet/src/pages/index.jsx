@@ -15,6 +15,8 @@ export default function Home({ data }) {
   const [isBottom, setIsBottom] = useState(false);
   const desktopBanner = getImage(data.nosotrosDesktopImg);
   const mobileBanner = getImage(data.nosotrosMobileImg);
+  const nosotros = getImage(data.nosotros);
+  const nosotrosMobile = getImage(data.nosotrosMobile);
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
@@ -120,14 +122,16 @@ export default function Home({ data }) {
           </div>
           <div className={I.nosotrosDesktop}>
             <GatsbyImage
-              image={desktopBanner}
+              // image={desktopBanner}
+              image={nosotros}
               alt="Fotografìa de la línea de producción de Galletitas Camet"
               loading="eager"
             />
           </div>
           <div className={I.nosotrosMobile}>
             <GatsbyImage
-              image={mobileBanner}
+              // image={mobileBanner}
+              image={nosotrosMobile}
               alt="Fotografìa de la línea de producción de Galletitas Camet"
               loading="eager"
             />
@@ -184,6 +188,16 @@ export const query = graphql`
     }
 
     nosotrosDesktopImg: file(relativePath: { eq: "produccion2.jpg" }) {
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH, quality: 100)
+      }
+    }
+    nosotrosMobile: file(relativePath: { eq: "produccion3_mobile.jpg" }) {
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH, quality: 100)
+      }
+    }
+    nosotros: file(relativePath: { eq: "produccion3.jpg" }) {
       childImageSharp {
         gatsbyImageData(layout: FULL_WIDTH, quality: 100)
       }
