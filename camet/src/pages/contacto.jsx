@@ -287,12 +287,12 @@ export const query = graphql`
   query {
     headerBanner: file(relativePath: { eq: "Contactanos_Desktop.jpg" }) {
       childImageSharp {
-        gatsbyImageData
+        gatsbyImageData(layout: FULL_WIDTH, quality: 100, placeholder: BLURRED)
       }
     }
     mobileHeaderBanner: file(relativePath: { eq: "Contactanos_Mobile.jpg" }) {
       childImageSharp {
-        gatsbyImageData
+        gatsbyImageData(layout: FULL_WIDTH, quality: 100, placeholder: BLURRED)
       }
     }
   }

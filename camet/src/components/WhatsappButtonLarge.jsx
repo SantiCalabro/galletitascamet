@@ -1,6 +1,6 @@
 import React from "react";
 import * as W from "../styles/WhatsappButtonLarge.module.css";
-export default function WhatsappButtonLarge({ phoneNumber, message, text }) {
+export default function WhatsappButtonLarge({ phoneNumber, message }) {
   const encodedMessage = encodeURIComponent(message);
   const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
   return (

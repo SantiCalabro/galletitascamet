@@ -1,15 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { graphql, Link } from "gatsby";
 import Layout from "../layouts/index";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import * as P from "../styles/Product.module.css";
 import WhatsappButton from "../components/WhatsappButtonLarge";
 
-const ProductoTemplate = ({ data }) => {
+const ProductoTemplate = ({ data, location }) => {
+  const { state } = location;
   const card = data.markdownRemark;
   const image = getImage(
     card.frontmatter.image.childImageSharp.gatsbyImageData
   );
+  useEffect(() => {
+    if (state && state.scrollTop) {
+      window.scrollTo(0, 0);
+    }
+  }, [state]);
 
   return (
     <Layout>
@@ -43,7 +49,10 @@ const ProductoTemplate = ({ data }) => {
             </p>
           </div>
           <div className={P.whatsapp}>
-            <WhatsappButton />
+            <WhatsappButton
+              phoneNumber="+5492233550129"
+              message={"Hola, quiero más información"}
+            />
           </div>
         </div>
       </div>

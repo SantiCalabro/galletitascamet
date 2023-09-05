@@ -96,6 +96,29 @@
   z-index: 100;
   transition: 350ms ease-in;
 }
+.download {
+  display: flex;
+  margin-bottom: 40px;
+}
+.download button {
+  border: none;
+  background-color: #633511;
+  color: #fff;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 50px;
+}
+.download svg {
+  fill: #fff;
+  scale: 0.7;
+  margin-left: 5px;
+}
+.download button:hover {
+  background-color: #ff7d00;
+  transition: 0.15s ease-in-out;
+}
 
 @media screen and (max-width: 767px) {
   .container {
@@ -162,5 +185,10 @@
   .quality p {
     text-align: center;
     color: #633511;
+  }
+
+  .download button {
+    width: 80vw;
+    background-color: #422209;
   }
 }

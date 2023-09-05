@@ -1,11 +1,11 @@
 .headerContainer {
   margin-top: 80px;
+  width: 100vw;
 }
 .container {
   display: flex;
   flex-direction: column;
   padding-top: 30px;
-  background-color: #fff;
 }
 
 .formContainer {

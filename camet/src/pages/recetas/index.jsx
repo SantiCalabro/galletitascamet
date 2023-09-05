@@ -63,9 +63,9 @@ export default function Recetas({ data }) {
         <div className={R.headerText}>
           <h1>Recetas</h1>
           <p>
-            Transformá ingeniosamente esas galletas que se humedecieron, en
-            creaciones irresistibles. Aprovecha cada bocado al máximo con estas
-            ideas sorprendentes.
+            Transformá ingeniosamente tus galletitas en creaciones
+            irresistibles. Aprovecha cada bocado al máximo con estas
+            ideas sorprendentes
           </p>
         </div>
         <div id="recetas" className={R.recipesList}>
@@ -73,7 +73,7 @@ export default function Recetas({ data }) {
           <ul>
             <li>
               <a href="#receta-1">
-                Cheesecake o tarta de queso con base de galletitas crackers
+                Cheesecake o tarta de queso con base de galletitas tipo crackers
                 <svg
                   className={R.titleArrow}
                   xmlns="http://www.w3.org/2000/svg"
@@ -85,7 +85,7 @@ export default function Recetas({ data }) {
               </a>
             </li>
             <li>
-              <a href="#receta-2">Dip de Galletitas Crackers</a>
+              <a href="#receta-2">Dip de Galletitas tipo Crackers</a>
               <svg
                 className={R.titleArrow}
                 xmlns="http://www.w3.org/2000/svg"
@@ -96,7 +96,7 @@ export default function Recetas({ data }) {
               </svg>
             </li>
             <li>
-              <a href="#receta-3">Trufas de Galletitas Crackers</a>
+              <a href="#receta-3">Trufas de Galletitas tipo Crackers</a>
               <svg
                 className={R.titleArrow}
                 xmlns="http://www.w3.org/2000/svg"
@@ -121,7 +121,7 @@ export default function Recetas({ data }) {
             </li>
             <li>
               <a href="#receta-5">
-                Pastel de Chocolate y Galletitas Crackers (Torta Fría)
+                Pastel de Chocolate y Galletitas tipo Crackers (Torta Fría)
               </a>
               <svg
                 className={R.titleArrow}
@@ -133,7 +133,7 @@ export default function Recetas({ data }) {
               </svg>
             </li>
             <li>
-              <a href="#receta-6">Pan Rallado con Galletitas Crackers</a>
+              <a href="#receta-6">Pan Rallado con Galletitas tipo Crackers</a>
               <svg
                 className={R.titleArrow}
                 xmlns="http://www.w3.org/2000/svg"
@@ -149,10 +149,10 @@ export default function Recetas({ data }) {
         <div id="receta-1" className={R.recipeContainer}>
           <div className={R.firstRow}>
             <div className={R.textContainer}>
-              <h3>Cheesecake con base de galletitas crackers</h3>
+              <h3>Cheesecake con base de galletitas tipo crackers</h3>
               <div className={R.ingredients}>
                 <strong>Ingredientes</strong>
-                <li>2 tazas de galletitas crackers trituradas</li>
+                <li>2 tazas de galletitas tipo crackers trituradas</li>
                 <li>1/2 taza de mantequilla derretida</li>
                 <li>2 tazas de queso crema</li>
                 <li>1 taza de azúcar</li>
@@ -164,7 +164,7 @@ export default function Recetas({ data }) {
             <div className={R.picContainer}>
               <GatsbyImage
                 image={cheesecake}
-                alt="Fotografía de Cheesecake con base de galletitas crackers"
+                alt="Fotografía de Cheesecake con base de galletitas tipo crackers"
               />
             </div>
           </div>
@@ -216,10 +216,10 @@ export default function Recetas({ data }) {
         <div id="receta-2" className={R.recipeContainer}>
           <div className={R.firstRow}>
             <div className={R.textContainer}>
-              <h3>Dip de Galletitas Crackers</h3>
+              <h3>Dip de Galletitas tipo Crackers</h3>
               <div className={R.ingredients}>
                 <strong>Ingredientes</strong>
-                <li>1 paquete de galletitas crackers</li>
+                <li>1 paquete de galletitas tipo crackers</li>
                 <li>200 gramos de queso crema</li>
                 <li>1 taza de crema agria</li>
                 <li>1 cucharadita de jugo de limón</li>
@@ -232,7 +232,7 @@ export default function Recetas({ data }) {
             <div className={R.picContainer}>
               <GatsbyImage
                 image={dip}
-                alt="Fotografía de Dip de Galletitas Crackers"
+                alt="Fotografía de Dip de Galletitas tipo Crackers"
               />
             </div>
           </div>
@@ -253,22 +253,23 @@ export default function Recetas({ data }) {
               4. Espolvorea el cebollino fresco picado por encima (opcional).
             </p>
             <p>
-              5. Sirve el dip en un plato acompañado de las galletitas crackers.
+              5. Sirve el dip en un plato acompañado de las galletitas tipo
+              crackers.
             </p>
 
             <p>
-              ¡Disfruta de este delicioso dip de galletitas crackers, perfecto
-              para picar y compartir en cualquier ocasión!
+              ¡Disfruta de este delicioso dip de galletitas tipo crackers,
+              perfecto para picar y compartir en cualquier ocasión!
             </p>
           </div>
         </div>
         <div id="receta-3" className={R.recipeContainer}>
           <div className={R.firstRow}>
             <div className={R.textContainer}>
-              <h3>Trufas de Galletitas Crackers</h3>
+              <h3>Trufas de Galletitas tipo Crackers</h3>
               <div className={R.ingredients}>
                 <strong>Ingredientes</strong>
-                <li>2 tazas de galletitas crackers trituradas</li>
+                <li>2 tazas de galletitas tipo crackers trituradas</li>
                 <li>1 taza de queso crema</li>
                 <li>1 taza de chocolate semidulce derretido</li>
                 <li>1/2 taza de azúcar glass</li>
@@ -282,16 +283,16 @@ export default function Recetas({ data }) {
             <div className={R.picContainer}>
               <GatsbyImage
                 image={trufas}
-                alt="Fotografía de Trufas de Galletitas Crackers"
+                alt="Fotografía de Trufas de Galletitas tipo Crackers"
               />
             </div>
           </div>
           <div className={R.recipe}>
             <strong>Instrucciones </strong>
             <p>
-              1. En un recipiente, mezcla las galletitas crackers trituradas con
-              el queso crema y la esencia de vainilla. Asegúrate de que estén
-              bien combinados.
+              1. En un recipiente, mezcla las galletitas tipo crackers
+              trituradas con el queso crema y la esencia de vainilla. Asegúrate
+              de que estén bien combinados.
             </p>
             <p>
               2. Forma pequeñas bolitas con la mezcla y colócalas en una bandeja
@@ -307,7 +308,7 @@ export default function Recetas({ data }) {
               completamente derretido y suave.
             </p>
             <p>
-              5. Saca las bolitas de galletitas crackers del refrigerador y
+              5. Saca las bolitas de galletitas tipo crackers del refrigerador y
               sumérgelas una a una en el chocolate derretido, asegurándote de
               cubrirlas por completo.
             </p>
@@ -328,8 +329,8 @@ export default function Recetas({ data }) {
               sírvelas.
             </p>
             <p>
-              ¡Disfruta de estas deliciosas trufas de galletitas crackers como
-              un dulce bocado o como un regalo para compartir!
+              ¡Disfruta de estas deliciosas trufas de galletitas tipo crackers
+              como un dulce bocado o como un regalo para compartir!
             </p>
           </div>
         </div>
@@ -388,11 +389,14 @@ export default function Recetas({ data }) {
         <div id="receta-5" className={R.recipeContainer}>
           <div className={R.firstRow}>
             <div className={R.textContainer}>
-              <h3>Pastel de Chocolate y Galletitas Crackers (Torta Fría)</h3>
+              <h3>
+                Pastel de Chocolate y Galletitas tipo Crackers (Torta Fría)
+              </h3>
               <div className={R.ingredients}>
                 <strong>Ingredientes</strong>
                 <li>
-                  2 paquetes de galletitas crackers (aproximadamente 400 gramos)
+                  2 paquetes de galletitas tipo crackers (aproximadamente 400
+                  gramos)
                 </li>
                 <li>1 taza de leche</li>
                 <li>1/2 taza de cacao en polvo sin azúcar</li>
@@ -408,7 +412,7 @@ export default function Recetas({ data }) {
             <div className={R.picContainer}>
               <GatsbyImage
                 image={tortaCrackers}
-                alt="Fotografía de Pastel de Chocolate y Galletitas Crackers (Torta Fría)"
+                alt="Fotografía de Pastel de Chocolate y Galletitas tipo Crackers (Torta Fría)"
               />
             </div>
           </div>
@@ -433,8 +437,8 @@ export default function Recetas({ data }) {
             </p>
             <p>
               5. En un molde rectangular o cuadrado, coloca una capa de
-              galletitas crackers en el fondo. Vierte una porción de la mezcla
-              de chocolate y crema por encima para cubrir las galletitas.
+              galletitas tipo crackers en el fondo. Vierte una porción de la
+              mezcla de chocolate y crema por encima para cubrir las galletitas.
             </p>
             <p>
               6. Repite el proceso, colocando otra capa de galletitas y
@@ -456,12 +460,12 @@ export default function Recetas({ data }) {
         <div id="receta-6" className={R.recipeContainer}>
           <div className={R.firstRow}>
             <div className={R.textContainer}>
-              <h3>Pan Rallado con Galletitas Crackers</h3>
+              <h3>Pan Rallado con Galletitas tipo Crackers</h3>
               <div className={R.ingredients}>
                 <strong>Ingredientes</strong>
                 <li>
-                  1 taza de galletitas crackers trituradas (pueden ser de sabor
-                  neutro o con algún condimento que te guste)
+                  1 taza de galletitas tipo crackers trituradas (pueden ser de
+                  sabor neutro o con algún condimento que te guste)
                 </li>
                 <li>1 cucharadita de ajo en polvo</li>
                 <li>1 cucharadita de cebolla en polvo</li>
@@ -474,7 +478,7 @@ export default function Recetas({ data }) {
             <div className={R.picContainer}>
               <GatsbyImage
                 image={panRallado}
-                alt="Fotografía de Pan Rallado con Galletitas Crackers"
+                alt="Fotografía de Pan Rallado con Galletitas tipo Crackers"
               />
             </div>
           </div>
@@ -482,7 +486,7 @@ export default function Recetas({ data }) {
             <strong>Instrucciones </strong>
             <p>1. Precalienta el horno a 180°C.</p>
             <p>
-              2. Coloca las galletitas crackers en una bolsa de plástico
+              2. Coloca las galletitas tipo crackers en una bolsa de plástico
               resellable y ciérrala bien. Con la ayuda de un rodillo de cocina o
               una cuchara de madera, tritura las galletitas hasta obtener
               migajas finas. También puedes usar un procesador de alimentos para
@@ -510,7 +514,7 @@ export default function Recetas({ data }) {
               recipiente hermético.
             </p>
             <p>
-              ¡Listo! Ahora tienes tu propio pan rallado con galletitas
+              ¡Listo! Ahora tienes tu propio pan rallado con galletitas tipo
               crackers, que puedes usar para empanizar carnes, pescados o
               verduras. Este pan rallado casero le dará un toque crujiente y
               delicioso a tus platos.

@@ -6,7 +6,7 @@ import * as P from "../../styles/Products.module.css";
 import Img from "gatsby-image";
 import WhatsappButton from "../../components/WhatsappButton.jsx";
 import { useState, useEffect } from "react";
-
+import catalogo from "../../pdf/Catalogo.pdf";
 export default function Productos({ data }) {
   const cards = data.allMarkdownRemark.nodes;
   const [isBottom, setIsBottom] = useState(false);
@@ -77,6 +77,7 @@ export default function Productos({ data }) {
               <Link
                 to={`/productos/${card.frontmatter.productId}`}
                 key={card.id}
+                state={{ scrollTop: true }}
               >
                 <div key={card.id} className={P.item}>
                   <div className={P.productImage}>
@@ -97,6 +98,21 @@ export default function Productos({ data }) {
             text={"Hacenos tu pregunta"}
           />
         </div>
+      </div>
+      <div className={P.download}>
+        <a href={catalogo} download="Catalogo">
+          <button>
+            Descargar catálogo
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path d="M16 11h5l-9 10-9-10h5v-11h8v11zm3 8v3h-14v-3h-2v5h18v-5h-2z" />
+            </svg>
+          </button>
+        </a>
       </div>
     </Layout>
   );

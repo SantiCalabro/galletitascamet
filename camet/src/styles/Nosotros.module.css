@@ -108,14 +108,15 @@
     display: none;
   }
   .titleContainer {
-    top: 270px;
+    top: 170px;
+    height: fit-content;
   }
   .titleContainer h1 {
     font-size: 40px;
   }
   .titleContainer h5 {
     font-size: 16px;
-    width: 70vw;
+    width: 80vw;
     text-align: center;
   }
 
